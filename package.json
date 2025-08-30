@@ -1,0 +1,19 @@
+{
+  "name": "runner-code-app",
+  "version": "1.0.0",
+  "description": "Runner Code - AI-Powered Development Assistant",
+  "main": "index.js",
+  "scripts": {
+    "build": "flutter build web --release",
+    "deploy": "flutter build web --release && git add . && git commit -m 'Update build' && git push"
+  },
+  "keywords": [
+    "flutter",
+    "web",
+    "ai",
+    "development",
+    "assistant"
+  ],
+  "author": "Runner Code",
+  "license": "MIT"
+}

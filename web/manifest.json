@@ -1,6 +1,6 @@
 {
-    "name": "runner_code_app",
-    "short_name": "runner_code_app",
+    "name": "Runner Code - AI-Powered Development Assistant",
+    "short_name": "Runner Code",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
