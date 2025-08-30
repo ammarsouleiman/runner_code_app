@@ -138,11 +138,11 @@ class _ITServicesScreenState extends State<ITServicesScreen>
           SizedBox(height: isVerySmallScreen ? 24 : 32),
           _buildFeaturesSection(isSmallScreen, isVerySmallScreen),
           SizedBox(height: isVerySmallScreen ? 24 : 32),
-          _buildTechnologiesSection(isSmallScreen, isVerySmallScreen),
+          _buildTechnologiesSection(isSmallScreen),
           SizedBox(height: isVerySmallScreen ? 24 : 32),
-          _buildProcessSection(isSmallScreen, isVerySmallScreen),
+          _buildProcessSection(isSmallScreen),
           SizedBox(height: isVerySmallScreen ? 24 : 32),
-          _buildContactSection(isSmallScreen, isVerySmallScreen),
+          _buildContactSection(isSmallScreen),
           SizedBox(height: isVerySmallScreen ? 24 : 32),
         ],
       ),
@@ -357,6 +357,8 @@ class _ITServicesScreenState extends State<ITServicesScreen>
     Color color,
     bool isVerySmallScreen,
   ) {
+    final screenSize = MediaQuery.of(context).size;
+    final isSmallScreen = screenSize.width < 600;
     return AnimatedBuilder(
       animation: _cardAnimation,
       builder: (context, child) {
