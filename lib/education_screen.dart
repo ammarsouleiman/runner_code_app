@@ -307,13 +307,7 @@ class _EducationScreenState extends State<EducationScreen>
             ),
           ),
           SizedBox(height: isVerySmallScreen ? 16 : 20),
-          GridView.count(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            crossAxisCount: isVerySmallScreen ? 1 : (isSmallScreen ? 1 : 2),
-            crossAxisSpacing: isVerySmallScreen ? 12 : 16,
-            mainAxisSpacing: isVerySmallScreen ? 12 : 16,
-            childAspectRatio: isVerySmallScreen ? 1.5 : 1.8,
+          Column(
             children: [
               _buildServiceCard(
                 'Online Learning Platform',
@@ -322,6 +316,7 @@ class _EducationScreenState extends State<EducationScreen>
                 const Color(0xFF00B4D8),
                 isVerySmallScreen,
               ),
+              SizedBox(height: isVerySmallScreen ? 12 : 16),
               _buildServiceCard(
                 'Flexible Scheduling',
                 Icons.schedule,
@@ -329,6 +324,7 @@ class _EducationScreenState extends State<EducationScreen>
                 const Color(0xFF9B5DE5),
                 isVerySmallScreen,
               ),
+              SizedBox(height: isVerySmallScreen ? 12 : 16),
               _buildServiceCard(
                 'Expert Instructors',
                 Icons.person,
@@ -336,6 +332,7 @@ class _EducationScreenState extends State<EducationScreen>
                 const Color(0xFF00F5D4),
                 isVerySmallScreen,
               ),
+              SizedBox(height: isVerySmallScreen ? 12 : 16),
               _buildServiceCard(
                 'Certified Programs',
                 Icons.verified,
@@ -427,32 +424,24 @@ class _EducationScreenState extends State<EducationScreen>
                     size: isVerySmallScreen ? 20 : (isSmallScreen ? 24 : 32)
                   ),
                 ),
-                SizedBox(height: isVerySmallScreen ? 8 : (isSmallScreen ? 12 : 16)),
-                Flexible(
-                  child: Text(
+                                  SizedBox(height: isVerySmallScreen ? 8 : (isSmallScreen ? 12 : 16)),
+                  Text(
                     title,
                     style: TextStyle(
                       fontSize: isVerySmallScreen ? 14 : (isSmallScreen ? 16 : 18),
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
                   ),
-                ),
-                SizedBox(height: isVerySmallScreen ? 4 : 8),
-                Flexible(
-                  child: Text(
+                  SizedBox(height: isVerySmallScreen ? 4 : 8),
+                  Text(
                     description,
                     style: TextStyle(
                       fontSize: isVerySmallScreen ? 11 : (isSmallScreen ? 12 : 14),
                       color: Colors.white.withValues(alpha: 0.8),
                       height: 1.4,
                     ),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: isVerySmallScreen ? 3 : 4,
                   ),
-                ),
               ],
             ),
           ),
@@ -506,15 +495,11 @@ class _EducationScreenState extends State<EducationScreen>
   }
 
   Widget _buildFeatureItem(IconData icon, String title, String description) {
-    final screenSize = MediaQuery.of(context).size;
-    final isSmallScreen = screenSize.width < 600;
-    final isVerySmallScreen = screenSize.width < 400;
-    
     return Container(
-      padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 14 : 16)),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: const Color(0xFF8B0000).withValues(alpha: 0.05),
-        borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
+        borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: const Color(0xFF8B0000).withValues(alpha: 0.2),
           width: 1,
@@ -523,46 +508,38 @@ class _EducationScreenState extends State<EducationScreen>
       child: Row(
         children: [
           Container(
-            padding: EdgeInsets.all(isVerySmallScreen ? 8 : 10),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [Color(0xFF8B0000), Color(0xFFB22222)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-              borderRadius: BorderRadius.circular(isVerySmallScreen ? 8 : 10),
+              borderRadius: BorderRadius.circular(10),
             ),
-            child: Icon(
-              icon, 
-              color: Colors.white, 
-              size: isVerySmallScreen ? 16 : 20
-            ),
+            child: Icon(icon, color: Colors.white, size: 20),
           ),
-          SizedBox(width: isVerySmallScreen ? 12 : 16),
+          const SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
-                    fontSize: isVerySmallScreen ? 14 : (isSmallScreen ? 15 : 16),
+                    fontSize: 16,
                     fontWeight: FontWeight.w700,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
                 ),
-                SizedBox(height: isVerySmallScreen ? 2 : 4),
+                const SizedBox(height: 4),
                 Text(
                   description,
                   style: TextStyle(
                     color: Colors.white.withValues(alpha: 0.7),
-                    fontSize: isVerySmallScreen ? 12 : (isSmallScreen ? 13 : 14),
+                    fontSize: 14,
                     height: 1.3,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: isVerySmallScreen ? 2 : 3,
                 ),
               ],
             ),
