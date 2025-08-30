@@ -1,19 +1,27 @@
 {
-  "name": "runner-code-app",
+  "name": "runner-code-email-server",
   "version": "1.0.0",
-  "description": "Runner Code - AI-Powered Development Assistant",
-  "main": "index.js",
+  "description": "Email server for Runner Code Education demo bookings",
+  "main": "server.js",
   "scripts": {
-    "build": "flutter build web --release",
-    "deploy": "flutter build web --release && git add . && git commit -m 'Update build' && git push"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   },
   "keywords": [
-    "flutter",
-    "web",
-    "ai",
-    "development",
-    "assistant"
+    "email",
+    "server",
+    "runner-code",
+    "education"
   ],
   "author": "Runner Code",
   "license": "MIT"
-}
+} 

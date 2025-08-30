@@ -255,16 +255,15 @@ class _ImageGeneratorScreenState extends State<ImageGeneratorScreen>
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final isSmallScreen = screenSize.width < 600;
-    final isVerySmallScreen = screenSize.width < 400;
 
     return Scaffold(
       backgroundColor: const Color(0xFF000000),
-      appBar: _buildAppBar(isSmallScreen, isVerySmallScreen),
-      body: _buildBody(isSmallScreen, isVerySmallScreen),
+      appBar: _buildAppBar(isSmallScreen),
+      body: _buildBody(isSmallScreen),
     );
   }
 
-  PreferredSizeWidget _buildAppBar(bool isSmallScreen, bool isVerySmallScreen) {
+  PreferredSizeWidget _buildAppBar(bool isSmallScreen) {
     return AppBar(
       backgroundColor: const Color(0xFF000000),
       elevation: 0,
@@ -325,29 +324,29 @@ class _ImageGeneratorScreenState extends State<ImageGeneratorScreen>
     );
   }
 
-  Widget _buildBody(bool isSmallScreen, bool isVerySmallScreen) {
+  Widget _buildBody(bool isSmallScreen) {
     return Column(
       children: [
-        Expanded(child: _buildImageList(isSmallScreen, isVerySmallScreen)),
-        _buildInputSection(isSmallScreen, isVerySmallScreen),
+        Expanded(child: _buildImageList(isSmallScreen)),
+        _buildInputSection(isSmallScreen),
       ],
     );
   }
 
-  Widget _buildImageList(bool isSmallScreen, bool isVerySmallScreen) {
+  Widget _buildImageList(bool isSmallScreen) {
     if (_images.isEmpty && !_isLoading) {
       return _buildWelcomeScreen();
     }
 
     return ListView.builder(
       controller: _scrollController,
-      padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 14 : 16)),
+      padding: const EdgeInsets.all(16),
       itemCount: _images.length + (_isLoading ? 1 : 0),
       itemBuilder: (context, index) {
         if (index == _images.length && _isLoading) {
           return _buildLoadingIndicator();
         }
-        return _buildImageCard(_images[index], isSmallScreen, isVerySmallScreen);
+        return _buildImageCard(_images[index], isSmallScreen);
       },
     );
   }
@@ -589,7 +588,7 @@ class _ImageGeneratorScreenState extends State<ImageGeneratorScreen>
     );
   }
 
-  Widget _buildImageCard(GeneratedImage image, bool isSmallScreen, bool isVerySmallScreen) {
+  Widget _buildImageCard(GeneratedImage image, bool isSmallScreen) {
     final screenSize = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
@@ -964,7 +963,7 @@ class _ImageGeneratorScreenState extends State<ImageGeneratorScreen>
     );
   }
 
-  Widget _buildInputSection(bool isSmallScreen, bool isVerySmallScreen) {
+  Widget _buildInputSection(bool isSmallScreen) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
