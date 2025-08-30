@@ -1,17 +1,52 @@
-# runner_code_app
+# Runner Code - AI-Powered Development Assistant
 
-A new Flutter project.
+تطبيق Flutter للويب يوفر مساعد ذكي للتطوير البرمجي.
 
-## Getting Started
+## 🚀 النشر على GitHub Pages
 
-This project is a starting point for a Flutter application.
+### الخطوات المطلوبة:
 
-A few resources to get you started if this is your first Flutter project:
+1. **تفعيل GitHub Pages**:
+   - اذهب إلى إعدادات المستودع (Repository Settings)
+   - اختر "Pages" من القائمة الجانبية
+   - اختر "GitHub Actions" كمصدر للنشر
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. **إعداد GitHub Actions**:
+   - الملف `.github/workflows/deploy.yml` موجود بالفعل
+   - سيتم البناء والنشر تلقائياً عند كل push إلى main/master
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. **الوصول للتطبيق**:
+   - بعد النشر، سيكون التطبيق متاح على: `https://[username].github.io/[repository-name]`
+
+## 🛠️ التطوير المحلي
+
+```bash
+# تثبيت التبعيات
+flutter pub get
+
+# تشغيل التطبيق للويب
+flutter run -d chrome
+
+# بناء التطبيق للويب
+flutter build web
+```
+
+## 📁 بنية المشروع
+
+- `lib/` - كود Dart الرئيسي
+- `web/` - ملفات الويب (HTML, CSS, JS)
+- `assets/` - الصور والموارد
+- `.github/workflows/` - إعدادات GitHub Actions
+
+## 🔧 المتطلبات
+
+- Flutter SDK 3.8.1+
+- Dart SDK 3.8.1+
+- متصفح ويب حديث
+
+## 📝 ملاحظات
+
+- تم استبعاد ملفات الخادم الخلفي (Node.js) من النشر
+- التطبيق يعمل كتطبيق ويب مستقل
+- يدعم التوجيه (routing) في GitHub Pages
 
