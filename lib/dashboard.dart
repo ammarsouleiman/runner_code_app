@@ -662,6 +662,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                   builder: (context) => const EducationScreen(),
                 ),
               ),
+              isSmallScreen,
+              isVerySmallScreen,
             ),
             const SizedBox(height: 16),
             _buildAboutCard(
@@ -675,6 +677,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                   builder: (context) => const ITServicesScreen(),
                 ),
               ),
+              isSmallScreen,
+              isVerySmallScreen,
             ),
           ],
         ),
@@ -1106,6 +1110,8 @@ class _DashboardScreenState extends State<DashboardScreen>
     Color color,
     String description,
     VoidCallback onTap,
+    bool isSmallScreen,
+    bool isVerySmallScreen,
   ) {
     return AnimatedBuilder(
       animation: _cardAnimation,
