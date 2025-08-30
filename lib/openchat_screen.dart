@@ -442,100 +442,119 @@ class _OpenChatScreenState extends State<OpenChatScreen>
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final isSmallScreen = screenSize.width < 600;
+    final isVerySmallScreen = screenSize.width < 400;
 
     return Scaffold(
       backgroundColor: const Color(0xFF000000),
-      appBar: _buildAppBar(isSmallScreen),
-      body: _buildBody(isSmallScreen),
+      appBar: _buildAppBar(isSmallScreen, isVerySmallScreen),
+      body: _buildBody(isSmallScreen, isVerySmallScreen),
     );
   }
 
-  PreferredSizeWidget _buildAppBar(bool isSmallScreen) {
+  PreferredSizeWidget _buildAppBar(bool isSmallScreen, bool isVerySmallScreen) {
     return AppBar(
       backgroundColor: const Color(0xFF000000),
       elevation: 0,
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back, color: Colors.white),
+        icon: Icon(
+          Icons.arrow_back, 
+          color: Colors.white,
+          size: isVerySmallScreen ? 18 : 20,
+        ),
         onPressed: () => Navigator.pop(context),
       ),
       title: Row(
         children: [
           Container(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(isVerySmallScreen ? 6 : 8),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [Color(0xFF8B0000), Color(0xFFB22222)],
               ),
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(isVerySmallScreen ? 6 : 8),
             ),
-            child: const Icon(Icons.psychology, color: Colors.white, size: 20),
+            child: Icon(
+              Icons.psychology, 
+              color: Colors.white, 
+              size: isVerySmallScreen ? 16 : 20
+            ),
           ),
-          const SizedBox(width: 12),
-          const Text(
-            'OpenChat',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1.2,
+          SizedBox(width: isVerySmallScreen ? 8 : 12),
+          Flexible(
+            child: Text(
+              'OpenChat',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: isVerySmallScreen ? 16 : (isSmallScreen ? 18 : 20),
+                fontWeight: FontWeight.w700,
+                letterSpacing: isVerySmallScreen ? 0.8 : 1.2,
+              ),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
       ),
       actions: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          padding: EdgeInsets.symmetric(
+            horizontal: isVerySmallScreen ? 6 : 8, 
+            vertical: isVerySmallScreen ? 3 : 4
+          ),
           decoration: BoxDecoration(
             gradient: const LinearGradient(
               colors: [Color(0xFF8B0000), Color(0xFFB22222)],
             ),
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(isVerySmallScreen ? 8 : 12),
           ),
-          child: const Text(
+          child: Text(
             'AI',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 12,
+              fontSize: isVerySmallScreen ? 10 : 12,
               fontWeight: FontWeight.w700,
             ),
           ),
         ),
-        const SizedBox(width: 8),
+        SizedBox(width: isVerySmallScreen ? 4 : 8),
         IconButton(
-          icon: const Icon(Icons.delete_outline, color: Colors.white, size: 20),
+          icon: Icon(
+            Icons.delete_outline, 
+            color: Colors.white, 
+            size: isVerySmallScreen ? 18 : 20
+          ),
           onPressed: _showClearDialog,
           tooltip: 'Clear Chat',
         ),
-        const SizedBox(width: 8),
+        SizedBox(width: isVerySmallScreen ? 4 : 8),
       ],
     );
   }
 
-  Widget _buildBody(bool isSmallScreen) {
+  Widget _buildBody(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       children: [
-        Expanded(child: _buildChatList(isSmallScreen)),
-        _buildInputSection(isSmallScreen),
+        Expanded(child: _buildChatList(isSmallScreen, isVerySmallScreen)),
+        _buildInputSection(isSmallScreen, isVerySmallScreen),
       ],
     );
   }
 
-  Widget _buildChatList(bool isSmallScreen) {
+  Widget _buildChatList(bool isSmallScreen, bool isVerySmallScreen) {
     if (_messages.isEmpty && !_isLoading) {
       return _buildWelcomeScreen();
     }
 
-    return ListView.builder(
-      controller: _scrollController,
-      padding: const EdgeInsets.all(16),
-      itemCount: _messages.length + (_isLoading ? 1 : 0),
-      itemBuilder: (context, index) {
-        if (index == _messages.length && _isLoading) {
-          return _buildTypingIndicator();
-        }
-        return _buildMessageBubble(_messages[index], isSmallScreen);
-      },
-    );
+          return ListView.builder(
+        controller: _scrollController,
+        padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 14 : 16)),
+        itemCount: _messages.length + (_isLoading ? 1 : 0),
+        itemBuilder: (context, index) {
+          if (index == _messages.length && _isLoading) {
+            return _buildTypingIndicator();
+          }
+          return _buildMessageBubble(_messages[index], isSmallScreen, isVerySmallScreen);
+        },
+      );
   }
 
   Widget _buildWelcomeScreen() {
@@ -779,7 +798,7 @@ class _OpenChatScreenState extends State<OpenChatScreen>
     );
   }
 
-  Widget _buildMessageBubble(ChatMessage message, bool isSmallScreen) {
+  Widget _buildMessageBubble(ChatMessage message, bool isSmallScreen, bool isVerySmallScreen) {
     final screenSize = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
@@ -961,7 +980,7 @@ class _OpenChatScreenState extends State<OpenChatScreen>
     );
   }
 
-  Widget _buildInputSection(bool isSmallScreen) {
+  Widget _buildInputSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(

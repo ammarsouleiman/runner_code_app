@@ -29,11 +29,47 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        useMaterial3: true,
+        // Responsive text scaling
+        textTheme: Theme.of(context).textTheme.apply(
+          bodyColor: Colors.white,
+          displayColor: Colors.white,
+        ),
+        // Responsive input decoration
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 16,
             vertical: 14,
+          ),
+          // Responsive padding based on screen size
+          isDense: true,
+        ),
+        // Responsive app bar theme
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF000000),
+          foregroundColor: Colors.white,
+          elevation: 0,
+          centerTitle: false,
+        ),
+        // Responsive card theme
+        cardTheme: CardTheme(
+          color: const Color(0xFF1A1A1A),
+          elevation: 8,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+        // Responsive elevated button theme
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF8B0000),
+            foregroundColor: Colors.white,
+            elevation: 4,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           ),
         ),
       ),

@@ -242,15 +242,16 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final isSmallScreen = screenSize.width < 600;
+    final isVerySmallScreen = screenSize.width < 400;
 
     return Scaffold(
       backgroundColor: const Color(0xFF000000),
-      appBar: _buildAppBar(isSmallScreen),
-      body: _buildBody(isSmallScreen),
+      appBar: _buildAppBar(isSmallScreen, isVerySmallScreen),
+      body: _buildBody(isSmallScreen, isVerySmallScreen),
     );
   }
 
-  PreferredSizeWidget _buildAppBar(bool isSmallScreen) {
+  PreferredSizeWidget _buildAppBar(bool isSmallScreen, bool isVerySmallScreen) {
     return AppBar(
       backgroundColor: const Color(0xFF000000),
       elevation: 0,
@@ -311,29 +312,29 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
     );
   }
 
-  Widget _buildBody(bool isSmallScreen) {
+  Widget _buildBody(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       children: [
-        Expanded(child: _buildMessageList(isSmallScreen)),
-        _buildInputSection(isSmallScreen),
+        Expanded(child: _buildMessageList(isSmallScreen, isVerySmallScreen)),
+        _buildInputSection(isSmallScreen, isVerySmallScreen),
       ],
     );
   }
 
-  Widget _buildMessageList(bool isSmallScreen) {
+  Widget _buildMessageList(bool isSmallScreen, bool isVerySmallScreen) {
     if (_messages.isEmpty && !_isLoading) {
       return _buildWelcomeScreen();
     }
 
     return ListView.builder(
       controller: _scrollController,
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 14 : 16)),
       itemCount: _messages.length + (_isLoading ? 1 : 0),
       itemBuilder: (context, index) {
         if (index == _messages.length && _isLoading) {
           return _buildLoadingIndicator();
         }
-        return _buildMessageCard(_messages[index], isSmallScreen);
+        return _buildMessageCard(_messages[index], isSmallScreen, isVerySmallScreen);
       },
     );
   }
@@ -526,7 +527,7 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
     );
   }
 
-  Widget _buildMessageCard(ChatMessage message, bool isSmallScreen) {
+  Widget _buildMessageCard(ChatMessage message, bool isSmallScreen, bool isVerySmallScreen) {
     final screenSize = MediaQuery.of(context).size;
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
@@ -712,7 +713,7 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
     );
   }
 
-  Widget _buildInputSection(bool isSmallScreen) {
+  Widget _buildInputSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(

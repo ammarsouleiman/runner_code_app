@@ -59,42 +59,46 @@ class _DashboardScreenState extends State<DashboardScreen>
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final isSmallScreen = screenSize.width < 600;
+    final isVerySmallScreen = screenSize.width < 400;
 
     return Scaffold(
       backgroundColor: const Color(0xFF0A0A0A),
-      appBar: _buildAppBar(isSmallScreen),
-      body: _buildBody(isSmallScreen),
+      appBar: _buildAppBar(isSmallScreen, isVerySmallScreen),
+      body: _buildBody(isSmallScreen, isVerySmallScreen),
     );
   }
 
-  PreferredSizeWidget _buildAppBar(bool isSmallScreen) {
+  PreferredSizeWidget _buildAppBar(bool isSmallScreen, bool isVerySmallScreen) {
     return AppBar(
       backgroundColor: const Color(0xFF000000),
       elevation: 0,
       title: Row(
         children: [
           Container(
-            width: 32,
-            height: 32,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
+            width: isVerySmallScreen ? 28 : 32,
+            height: isVerySmallScreen ? 28 : 32,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(isVerySmallScreen ? 6 : 8)),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(isVerySmallScreen ? 6 : 8),
               child: Image.asset(
                 'assets/images/images.png',
-                width: 32,
-                height: 32,
+                width: isVerySmallScreen ? 28 : 32,
+                height: isVerySmallScreen ? 28 : 32,
                 fit: BoxFit.contain,
               ),
             ),
           ),
-          const SizedBox(width: 12),
-          const Text(
-            'RUNNER CODE',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1.2,
+          SizedBox(width: isVerySmallScreen ? 8 : 12),
+          Flexible(
+            child: Text(
+              'RUNNER CODE',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: isVerySmallScreen ? 16 : (isSmallScreen ? 18 : 20),
+                fontWeight: FontWeight.w700,
+                letterSpacing: isVerySmallScreen ? 0.8 : 1.2,
+              ),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
@@ -102,14 +106,22 @@ class _DashboardScreenState extends State<DashboardScreen>
       actions: [
         // Delete Account Button
         IconButton(
-          icon: const Icon(Icons.delete_forever, color: Colors.red, size: 24),
+          icon: Icon(
+            Icons.delete_forever, 
+            color: Colors.red, 
+            size: isVerySmallScreen ? 20 : 24
+          ),
           onPressed: _deleteAccount,
           tooltip: 'Delete Account',
         ),
-        const SizedBox(width: 8),
+        SizedBox(width: isVerySmallScreen ? 4 : 8),
         // Logout Button
         IconButton(
-          icon: const Icon(Icons.logout, color: Colors.white, size: 24),
+          icon: Icon(
+            Icons.logout, 
+            color: Colors.white, 
+            size: isVerySmallScreen ? 20 : 24
+          ),
           onPressed: _logout,
           tooltip: 'Logout',
         ),
@@ -117,33 +129,33 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildBody(bool isSmallScreen) {
+  Widget _buildBody(bool isSmallScreen, bool isVerySmallScreen) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 14 : 16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildWelcomeSection(isSmallScreen),
-          const SizedBox(height: 24),
-          _buildNewsSection(isSmallScreen),
-          const SizedBox(height: 24),
-          _buildAboutRunnerCodeSection(isSmallScreen),
-          const SizedBox(height: 24),
-          _buildFreeCourseSection(isSmallScreen),
-          const SizedBox(height: 24),
-          _buildFreeWebsiteSection(isSmallScreen),
-          const SizedBox(height: 24),
-          _buildAIToolsSection(isSmallScreen),
-          const SizedBox(height: 24),
-          _buildRunnerCodeWebsitesSection(isSmallScreen),
-          const SizedBox(height: 24),
-          _buildContactUsSection(isSmallScreen),
+          _buildWelcomeSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          _buildNewsSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          _buildAboutRunnerCodeSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          _buildFreeCourseSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          _buildFreeWebsiteSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          _buildAIToolsSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          _buildRunnerCodeWebsitesSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          _buildContactUsSection(isSmallScreen, isVerySmallScreen),
         ],
       ),
     );
   }
 
-  Widget _buildWelcomeSection(bool isSmallScreen) {
+  Widget _buildWelcomeSection(bool isSmallScreen, bool isVerySmallScreen) {
     return AnimatedBuilder(
       animation: _cardAnimation,
       builder: (context, child) {
@@ -151,7 +163,7 @@ class _DashboardScreenState extends State<DashboardScreen>
           scale: _cardAnimation.value,
           child: Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(32),
+            padding: EdgeInsets.all(isVerySmallScreen ? 20 : (isSmallScreen ? 24 : 32)),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 begin: Alignment.topLeft,
@@ -165,84 +177,148 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ],
                 stops: [0.0, 0.3, 0.6, 0.8, 1.0],
               ),
-              borderRadius: BorderRadius.circular(24),
+              borderRadius: BorderRadius.circular(isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
               boxShadow: [
                 BoxShadow(
                   color: const Color(0xFF8B0000).withValues(alpha: 0.4),
-                  blurRadius: 30,
-                  offset: const Offset(0, 12),
+                  blurRadius: isVerySmallScreen ? 20 : 30,
+                  offset: Offset(0, isVerySmallScreen ? 8 : 12),
                 ),
                 BoxShadow(
                   color: const Color(0xFF000000).withValues(alpha: 0.6),
-                  blurRadius: 15,
-                  offset: const Offset(0, 6),
+                  blurRadius: isVerySmallScreen ? 10 : 15,
+                  offset: Offset(0, isVerySmallScreen ? 4 : 6),
                 ),
               ],
             ),
-            child: Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Color(0xFFFFFFFF), Color(0xFFF0F0F0)],
+            child: isVerySmallScreen 
+              ? Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(isVerySmallScreen ? 16 : 20),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xFFFFFFFF), Color(0xFFF0F0F0)],
+                        ),
+                        borderRadius: BorderRadius.circular(isVerySmallScreen ? 16 : 20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFFFFFFFF).withValues(alpha: 0.3),
+                            blurRadius: isVerySmallScreen ? 10 : 15,
+                            offset: Offset(0, isVerySmallScreen ? 4 : 6),
+                          ),
+                        ],
+                      ),
+                      child: Icon(
+                        Icons.person,
+                        color: const Color(0xFF8B0000),
+                        size: isVerySmallScreen ? 28 : 36,
+                      ),
                     ),
-                    borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xFFFFFFFF).withValues(alpha: 0.3),
-                        blurRadius: 15,
-                        offset: const Offset(0, 6),
-                      ),
-                    ],
-                  ),
-                  child: const Icon(
-                    Icons.person,
-                    color: Color(0xFF8B0000),
-                    size: 36,
-                  ),
-                ),
-                const SizedBox(width: 20),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Welcome!',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
+                    SizedBox(height: isVerySmallScreen ? 12 : 20),
+                    Column(
+                      children: [
+                        Text(
+                          'Welcome!',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: isVerySmallScreen ? 16 : 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        widget.userName,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
+                        SizedBox(height: isVerySmallScreen ? 2 : 4),
+                        Text(
+                          widget.userName,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: isVerySmallScreen ? 14 : 18,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
+                        SizedBox(height: isVerySmallScreen ? 6 : 8),
+                        Text(
+                          'Ready to explore the future of AI-powered development',
+                          style: TextStyle(
+                            color: Colors.white70, 
+                            fontSize: isVerySmallScreen ? 12 : 14
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              : Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xFFFFFFFF), Color(0xFFF0F0F0)],
+                        ),
+                        borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFFFFFFFF).withValues(alpha: 0.3),
+                            blurRadius: isSmallScreen ? 10 : 15,
+                            offset: Offset(0, isSmallScreen ? 4 : 6),
+                          ),
+                        ],
                       ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Ready to explore the future of AI-powered development',
-                        style: TextStyle(color: Colors.white70, fontSize: 14),
+                      child: Icon(
+                        Icons.person,
+                        color: const Color(0xFF8B0000),
+                        size: isSmallScreen ? 30 : 36,
                       ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(width: isSmallScreen ? 16 : 20),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Welcome!',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: isSmallScreen ? 18 : 20,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          SizedBox(height: isSmallScreen ? 3 : 4),
+                          Text(
+                            widget.userName,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: isSmallScreen ? 16 : 18,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          SizedBox(height: isSmallScreen ? 6 : 8),
+                          Text(
+                            'Ready to explore the future of AI-powered development',
+                            style: TextStyle(
+                              color: Colors.white70, 
+                              fontSize: isSmallScreen ? 13 : 14
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
           ),
         );
       },
     );
   }
 
-  Widget _buildNewsSection(bool isSmallScreen) {
+  Widget _buildNewsSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -550,7 +626,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildAboutRunnerCodeSection(bool isSmallScreen) {
+  Widget _buildAboutRunnerCodeSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -600,7 +676,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildFreeCourseSection(bool isSmallScreen) {
+  Widget _buildFreeCourseSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -618,7 +694,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildFreeWebsiteSection(bool isSmallScreen) {
+  Widget _buildFreeWebsiteSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1119,7 +1195,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildAIToolsSection(bool isSmallScreen) {
+  Widget _buildAIToolsSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1286,7 +1362,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildRunnerCodeWebsitesSection(bool isSmallScreen) {
+  Widget _buildRunnerCodeWebsitesSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1333,7 +1409,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     );
   }
 
-  Widget _buildContactUsSection(bool isSmallScreen) {
+  Widget _buildContactUsSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

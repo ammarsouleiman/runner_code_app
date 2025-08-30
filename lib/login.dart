@@ -156,46 +156,48 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final isSmallScreen = screenSize.width < 600;
+    final isVerySmallScreen = screenSize.width < 400;
 
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              const Color(0xFF000000),
-              const Color(0xFF1A1A1A),
-              const Color(0xFF8B0000),
-              const Color(0xFFB22222),
+              Color(0xFF000000),
+              Color(0xFF1A1A1A),
+              Color(0xFF8B0000),
+              Color(0xFFB22222),
             ],
           ),
         ),
         child: SafeArea(
           child: Center(
             child: SingleChildScrollView(
-              padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+              padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  maxWidth: isSmallScreen ? double.infinity : 400,
+                  maxWidth: isSmallScreen ? double.infinity : 450,
+                  minHeight: screenSize.height - 100,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     // Logo/Header Section
-                    _buildHeaderSection(isSmallScreen),
-                    SizedBox(height: isSmallScreen ? 30 : 50),
+                    _buildHeaderSection(isSmallScreen, isVerySmallScreen),
+                    SizedBox(height: isVerySmallScreen ? 20 : (isSmallScreen ? 30 : 50)),
 
                     // Login Form
-                    _buildLoginForm(isSmallScreen),
-                    SizedBox(height: isSmallScreen ? 20 : 30),
+                    _buildLoginForm(isSmallScreen, isVerySmallScreen),
+                    SizedBox(height: isVerySmallScreen ? 15 : (isSmallScreen ? 20 : 30)),
 
                     // Additional Options
-                    _buildAdditionalOptions(isSmallScreen),
-                    SizedBox(height: isSmallScreen ? 30 : 40),
+                    _buildAdditionalOptions(isSmallScreen, isVerySmallScreen),
+                    SizedBox(height: isVerySmallScreen ? 20 : (isSmallScreen ? 30 : 40)),
 
                     // Social Login
-                    _buildSocialLogin(isSmallScreen),
+                    _buildSocialLogin(isSmallScreen, isVerySmallScreen),
                   ],
                 ),
               ),
@@ -206,16 +208,16 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildHeaderSection(bool isSmallScreen) {
+  Widget _buildHeaderSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Column(
       children: [
         // Professional Logo
         Container(
-          width: isSmallScreen ? 80 : 100,
-          height: isSmallScreen ? 80 : 100,
+          width: isVerySmallScreen ? 60 : (isSmallScreen ? 80 : 100),
+          height: isVerySmallScreen ? 60 : (isSmallScreen ? 80 : 100),
           decoration: BoxDecoration(
             color: Colors.white.withValues(alpha: 0.1),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(isVerySmallScreen ? 15 : 20),
             border: Border.all(
               color: Colors.white.withValues(alpha: 0.2),
               width: 1,
@@ -223,66 +225,68 @@ class _LoginScreenState extends State<LoginScreen> {
             boxShadow: [
               BoxShadow(
                 color: const Color(0xFF8B0000).withValues(alpha: 0.3),
-                blurRadius: 15,
-                offset: const Offset(0, 8),
+                blurRadius: isVerySmallScreen ? 10 : 15,
+                offset: Offset(0, isVerySmallScreen ? 5 : 8),
               ),
             ],
           ),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(isVerySmallScreen ? 15 : 20),
             child: Image.asset(
               'assets/images/images.png',
-              width: isSmallScreen ? 80 : 100,
-              height: isSmallScreen ? 80 : 100,
+              width: isVerySmallScreen ? 60 : (isSmallScreen ? 80 : 100),
+              height: isVerySmallScreen ? 60 : (isSmallScreen ? 80 : 100),
               fit: BoxFit.contain,
             ),
           ),
         ),
-        SizedBox(height: isSmallScreen ? 24 : 32),
+        SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 24 : 32)),
 
         // App Name
         Text(
           'RUNNER CODE',
           style: TextStyle(
             color: Colors.white,
-            fontSize: isSmallScreen ? 24 : 32,
+            fontSize: isVerySmallScreen ? 20 : (isSmallScreen ? 24 : 32),
             fontWeight: FontWeight.w700,
-            letterSpacing: 1.5,
+            letterSpacing: isVerySmallScreen ? 1.0 : 1.5,
             shadows: [
               Shadow(
                 color: const Color(0xFF8B0000).withValues(alpha: 0.5),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
+                blurRadius: isVerySmallScreen ? 8 : 10,
+                offset: Offset(0, isVerySmallScreen ? 3 : 4),
               ),
             ],
           ),
+          textAlign: TextAlign.center,
         ),
-        SizedBox(height: isSmallScreen ? 8 : 12),
+        SizedBox(height: isVerySmallScreen ? 6 : (isSmallScreen ? 8 : 12)),
 
         // Welcome Text
         Text(
           'Welcome!',
           style: TextStyle(
             color: Colors.white.withValues(alpha: 0.8),
-            fontSize: isSmallScreen ? 16 : 18,
+            fontSize: isVerySmallScreen ? 14 : (isSmallScreen ? 16 : 18),
             fontWeight: FontWeight.w400,
           ),
+          textAlign: TextAlign.center,
         ),
       ],
     );
   }
 
-  Widget _buildLoginForm(bool isSmallScreen) {
+  Widget _buildLoginForm(bool isSmallScreen, bool isVerySmallScreen) {
     return Container(
-      padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
+      padding: EdgeInsets.all(isVerySmallScreen ? 16 : (isSmallScreen ? 24 : 32)),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(isVerySmallScreen ? 16 : 20),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.1),
-            blurRadius: 20,
-            offset: Offset(0, 10),
+            blurRadius: isVerySmallScreen ? 15 : 20,
+            offset: Offset(0, isVerySmallScreen ? 8 : 10),
           ),
         ],
       ),
@@ -297,7 +301,7 @@ class _LoginScreenState extends State<LoginScreen> {
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.next,
               style: TextStyle(
-                fontSize: isSmallScreen ? 14 : 16,
+                fontSize: isVerySmallScreen ? 13 : (isSmallScreen ? 14 : 16),
                 fontWeight: FontWeight.w500,
               ),
               decoration: InputDecoration(
@@ -305,23 +309,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 labelStyle: TextStyle(
                   color: Colors.grey.shade600,
                   fontWeight: FontWeight.w500,
-                  fontSize: 14,
+                  fontSize: isVerySmallScreen ? 12 : 14,
                 ),
                 prefixIcon: Icon(
                   Icons.email_outlined,
                   color: const Color(0xFF8B0000),
-                  size: 20,
+                  size: isVerySmallScreen ? 18 : 20,
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
                   borderSide: BorderSide(color: Colors.grey.shade300),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
                   borderSide: BorderSide(color: Colors.grey.shade300),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
                   borderSide: BorderSide(
                     color: const Color(0xFF8B0000),
                     width: 2,
@@ -330,8 +334,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 filled: true,
                 fillColor: Colors.grey.shade50,
                 contentPadding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 16,
+                  horizontal: isVerySmallScreen ? 12 : 16,
+                  vertical: isVerySmallScreen ? 12 : 16,
                 ),
               ),
               validator: _validateEmail,
@@ -339,7 +343,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 FocusScope.of(context).requestFocus(_focusNodePassword);
               },
             ),
-            SizedBox(height: isSmallScreen ? 20 : 25),
+            SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 25)),
 
             // Password Field
             TextFormField(
@@ -348,7 +352,7 @@ class _LoginScreenState extends State<LoginScreen> {
               obscureText: !_isPasswordVisible,
               textInputAction: TextInputAction.done,
               style: TextStyle(
-                fontSize: isSmallScreen ? 14 : 16,
+                fontSize: isVerySmallScreen ? 13 : (isSmallScreen ? 14 : 16),
                 fontWeight: FontWeight.w500,
               ),
               decoration: InputDecoration(
@@ -356,12 +360,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 labelStyle: TextStyle(
                   color: Colors.grey.shade600,
                   fontWeight: FontWeight.w500,
-                  fontSize: 14,
+                  fontSize: isVerySmallScreen ? 12 : 14,
                 ),
                 prefixIcon: Icon(
                   Icons.lock_outline,
                   color: const Color(0xFF8B0000),
-                  size: 20,
+                  size: isVerySmallScreen ? 18 : 20,
                 ),
                 suffixIcon: IconButton(
                   icon: Icon(
@@ -369,7 +373,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ? Icons.visibility_outlined
                         : Icons.visibility_off_outlined,
                     color: Colors.grey.shade600,
-                    size: 20,
+                    size: isVerySmallScreen ? 18 : 20,
                   ),
                   onPressed: () {
                     setState(() {
@@ -378,15 +382,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
                   borderSide: BorderSide(color: Colors.grey.shade300),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
                   borderSide: BorderSide(color: Colors.grey.shade300),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
                   borderSide: BorderSide(
                     color: const Color(0xFF8B0000),
                     width: 2,
@@ -395,39 +399,43 @@ class _LoginScreenState extends State<LoginScreen> {
                 filled: true,
                 fillColor: Colors.grey.shade50,
                 contentPadding: EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 16,
+                  horizontal: isVerySmallScreen ? 12 : 16,
+                  vertical: isVerySmallScreen ? 12 : 16,
                 ),
               ),
               validator: _validatePassword,
               onEditingComplete: _submitForm,
             ),
-            SizedBox(height: isSmallScreen ? 16 : 20),
+            SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 20)),
 
             // Remember Me & Forgot Password
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Checkbox(
-                      value: _rememberMe,
-                      onChanged: (value) {
-                        setState(() {
-                          _rememberMe = value ?? false;
-                        });
-                      },
-                      activeColor: const Color(0xFF8B0000),
-                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                    ),
-                    Text(
-                      'Remember me',
-                      style: TextStyle(
-                        fontSize: isSmallScreen ? 12 : 14,
-                        fontWeight: FontWeight.w500,
+                Expanded(
+                  child: Row(
+                    children: [
+                      Checkbox(
+                        value: _rememberMe,
+                        onChanged: (value) {
+                          setState(() {
+                            _rememberMe = value ?? false;
+                          });
+                        },
+                        activeColor: const Color(0xFF8B0000),
+                        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       ),
-                    ),
-                  ],
+                      Flexible(
+                        child: Text(
+                          'Remember me',
+                          style: TextStyle(
+                            fontSize: isVerySmallScreen ? 11 : (isSmallScreen ? 12 : 14),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 TextButton(
                   onPressed: () {},
@@ -436,41 +444,41 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(
                       color: const Color(0xFF8B0000),
                       fontWeight: FontWeight.w600,
-                      fontSize: isSmallScreen ? 12 : 14,
+                      fontSize: isVerySmallScreen ? 11 : (isSmallScreen ? 12 : 14),
                     ),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: isSmallScreen ? 25 : 30),
+            SizedBox(height: isVerySmallScreen ? 20 : (isSmallScreen ? 25 : 30)),
 
             // Login Button
             SizedBox(
               width: double.infinity,
-              height: 50,
+              height: isVerySmallScreen ? 45 : 50,
               child: ElevatedButton(
                 onPressed: _isLoading ? null : _submitForm,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF8B0000),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
                   ),
                   elevation: 0,
                 ),
                 child: _isLoading
                     ? SizedBox(
-                        width: 20,
-                        height: 20,
+                        width: isVerySmallScreen ? 18 : 20,
+                        height: isVerySmallScreen ? 18 : 20,
                         child: CircularProgressIndicator(
                           strokeWidth: 2,
-                          valueColor: AlwaysStoppedAnimation(Colors.white),
+                          valueColor: const AlwaysStoppedAnimation(Colors.white),
                         ),
                       )
                     : Text(
                         'Sign In',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: isVerySmallScreen ? 14 : 16,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -482,16 +490,19 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildAdditionalOptions(bool isSmallScreen) {
+  Widget _buildAdditionalOptions(bool isSmallScreen, bool isVerySmallScreen) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          "Don't have an account? ",
-          style: TextStyle(
-            color: Colors.white.withValues(alpha: 0.8),
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
+        Flexible(
+          child: Text(
+            "Don't have an account? ",
+            style: TextStyle(
+              color: Colors.white.withValues(alpha: 0.8),
+              fontSize: isVerySmallScreen ? 12 : 14,
+              fontWeight: FontWeight.w400,
+            ),
+            textAlign: TextAlign.center,
           ),
         ),
         TextButton(
@@ -506,7 +517,7 @@ class _LoginScreenState extends State<LoginScreen> {
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w600,
-              fontSize: 14,
+              fontSize: isVerySmallScreen ? 12 : 14,
             ),
           ),
         ),
@@ -514,7 +525,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildSocialLogin(bool isSmallScreen) {
+  Widget _buildSocialLogin(bool isSmallScreen, bool isVerySmallScreen) {
     return Container(); // Remove social login for cleaner design
   }
 }

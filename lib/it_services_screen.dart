@@ -53,15 +53,16 @@ class _ITServicesScreenState extends State<ITServicesScreen>
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final isSmallScreen = screenSize.width < 600;
+    final isVerySmallScreen = screenSize.width < 400;
 
     return Scaffold(
       backgroundColor: const Color(0xFF000000),
-      appBar: _buildAppBar(isSmallScreen),
-      body: _buildBody(isSmallScreen),
+      appBar: _buildAppBar(isSmallScreen, isVerySmallScreen),
+      body: _buildBody(isSmallScreen, isVerySmallScreen),
     );
   }
 
-  PreferredSizeWidget _buildAppBar(bool isSmallScreen) {
+  PreferredSizeWidget _buildAppBar(bool isSmallScreen, bool isVerySmallScreen) {
     return AppBar(
       backgroundColor: const Color(0xFF000000),
       elevation: 0,
@@ -116,7 +117,7 @@ class _ITServicesScreenState extends State<ITServicesScreen>
     );
   }
 
-  Widget _buildBody(bool isSmallScreen) {
+  Widget _buildBody(bool isSmallScreen, bool isVerySmallScreen) {
     return SingleChildScrollView(
       child: Column(
         children: [
