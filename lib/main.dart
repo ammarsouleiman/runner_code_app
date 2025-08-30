@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
           centerTitle: false,
         ),
         // Responsive card theme
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           color: const Color(0xFF1A1A1A),
           elevation: 8,
           shape: RoundedRectangleBorder(
