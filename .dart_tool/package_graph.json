@@ -433,7 +433,7 @@
     },
     {
       "name": "url_launcher_android",
-      "version": "6.3.17",
+      "version": "6.3.18",
       "dependencies": [
         "flutter",
         "url_launcher_platform_interface"
@@ -545,7 +545,7 @@
     },
     {
       "name": "shared_preferences_android",
-      "version": "2.4.11",
+      "version": "2.4.12",
       "dependencies": [
         "flutter",
         "shared_preferences_platform_interface"
