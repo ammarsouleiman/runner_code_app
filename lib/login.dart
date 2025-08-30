@@ -278,7 +278,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildLoginForm(bool isSmallScreen, bool isVerySmallScreen) {
     return Container(
-      padding: EdgeInsets.all(isVerySmallScreen ? 16 : (isSmallScreen ? 24 : 32)),
+                    padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 20 : 32)),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(isVerySmallScreen ? 16 : 20),

@@ -91,7 +91,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: SafeArea(
           child: Center(
             child: Padding(
-              padding: EdgeInsets.all(isSmallScreen ? 20 : 40),
+              padding: EdgeInsets.all(isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 40)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

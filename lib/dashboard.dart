@@ -131,24 +131,24 @@ class _DashboardScreenState extends State<DashboardScreen>
 
   Widget _buildBody(bool isSmallScreen, bool isVerySmallScreen) {
     return SingleChildScrollView(
-      padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 14 : 16)),
+      padding: EdgeInsets.all(isVerySmallScreen ? 8 : (isSmallScreen ? 12 : 16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildWelcomeSection(isSmallScreen, isVerySmallScreen),
-          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
           _buildNewsSection(isSmallScreen, isVerySmallScreen),
-          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
           _buildAboutRunnerCodeSection(isSmallScreen, isVerySmallScreen),
-          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
           _buildFreeCourseSection(isSmallScreen, isVerySmallScreen),
-          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
           _buildFreeWebsiteSection(isSmallScreen, isVerySmallScreen),
-          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
           _buildAIToolsSection(isSmallScreen, isVerySmallScreen),
-          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
           _buildRunnerCodeWebsitesSection(isSmallScreen, isVerySmallScreen),
-          SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+          SizedBox(height: isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 24)),
           _buildContactUsSection(isSmallScreen, isVerySmallScreen),
         ],
       ),
@@ -195,36 +195,36 @@ class _DashboardScreenState extends State<DashboardScreen>
               ? Column(
                   children: [
                     Container(
-                      padding: EdgeInsets.all(isVerySmallScreen ? 16 : 20),
+                      padding: EdgeInsets.all(isVerySmallScreen ? 12 : 20),
                       decoration: BoxDecoration(
                         gradient: const LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [Color(0xFFFFFFFF), Color(0xFFF0F0F0)],
                         ),
-                        borderRadius: BorderRadius.circular(isVerySmallScreen ? 16 : 20),
+                        borderRadius: BorderRadius.circular(isVerySmallScreen ? 12 : 20),
                         boxShadow: [
                           BoxShadow(
                             color: const Color(0xFFFFFFFF).withValues(alpha: 0.3),
-                            blurRadius: isVerySmallScreen ? 10 : 15,
-                            offset: Offset(0, isVerySmallScreen ? 4 : 6),
+                            blurRadius: isVerySmallScreen ? 8 : 15,
+                            offset: Offset(0, isVerySmallScreen ? 3 : 6),
                           ),
                         ],
                       ),
                       child: Icon(
                         Icons.person,
                         color: const Color(0xFF8B0000),
-                        size: isVerySmallScreen ? 28 : 36,
+                        size: isVerySmallScreen ? 24 : 36,
                       ),
                     ),
-                    SizedBox(height: isVerySmallScreen ? 12 : 20),
+                    SizedBox(height: isVerySmallScreen ? 8 : 20),
                     Column(
                       children: [
                         Text(
                           'Welcome!',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: isVerySmallScreen ? 16 : 20,
+                            fontSize: isVerySmallScreen ? 14 : 20,
                             fontWeight: FontWeight.w600,
                           ),
                           textAlign: TextAlign.center,
@@ -234,17 +234,17 @@ class _DashboardScreenState extends State<DashboardScreen>
                           widget.userName,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: isVerySmallScreen ? 14 : 18,
+                            fontSize: isVerySmallScreen ? 12 : 18,
                             fontWeight: FontWeight.w400,
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: isVerySmallScreen ? 6 : 8),
+                        SizedBox(height: isVerySmallScreen ? 4 : 8),
                         Text(
                           'Ready to explore the future of AI-powered development',
                           style: TextStyle(
                             color: Colors.white70, 
-                            fontSize: isVerySmallScreen ? 12 : 14
+                            fontSize: isVerySmallScreen ? 10 : 14
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -325,47 +325,57 @@ class _DashboardScreenState extends State<DashboardScreen>
         Row(
           children: [
             Container(
-              padding: const EdgeInsets.all(8),
+              padding: EdgeInsets.all(isVerySmallScreen ? 6 : 8),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   colors: [Color(0xFF8B0000), Color(0xFFB22222)],
                 ),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(isVerySmallScreen ? 6 : 8),
               ),
-              child: const Icon(Icons.newspaper, color: Colors.white, size: 16),
+              child: Icon(
+                Icons.newspaper, 
+                color: Colors.white, 
+                size: isVerySmallScreen ? 14 : 16
+              ),
             ),
-            const SizedBox(width: 12),
-            const Text(
-              'BREAKING NEWS',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 1.5,
+            SizedBox(width: isVerySmallScreen ? 8 : 12),
+            Flexible(
+              child: Text(
+                'BREAKING NEWS',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: isVerySmallScreen ? 14 : 18,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: isVerySmallScreen ? 1.0 : 1.5,
+                ),
+                overflow: TextOverflow.ellipsis,
               ),
             ),
             const Spacer(),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              padding: EdgeInsets.symmetric(
+                horizontal: isVerySmallScreen ? 8 : 12, 
+                vertical: isVerySmallScreen ? 3 : 4
+              ),
               decoration: BoxDecoration(
                 color: const Color(0xFF8B0000),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(isVerySmallScreen ? 8 : 12),
               ),
-              child: const Text(
+              child: Text(
                 'LIVE',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 10,
+                  fontSize: isVerySmallScreen ? 8 : 10,
                   fontWeight: FontWeight.w700,
-                  letterSpacing: 1,
+                  letterSpacing: isVerySmallScreen ? 0.5 : 1,
                 ),
               ),
             ),
           ],
         ),
-        const SizedBox(height: 16),
+        SizedBox(height: isVerySmallScreen ? 12 : 16),
         Container(
-          height: 160,
+          height: isVerySmallScreen ? 120 : (isSmallScreen ? 140 : 160),
           decoration: BoxDecoration(
             gradient: const LinearGradient(
               begin: Alignment.topLeft,
@@ -1110,7 +1120,7 @@ class _DashboardScreenState extends State<DashboardScreen>
             onTap: onTap,
             borderRadius: BorderRadius.circular(24),
             child: Container(
-              padding: const EdgeInsets.all(28),
+              padding: EdgeInsets.all(isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 28)),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   begin: Alignment.topLeft,
@@ -1123,7 +1133,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                   ],
                   stops: [0.0, 0.4, 0.7, 1.0],
                 ),
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
                 border: Border.all(
                   color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
                   width: 1,
@@ -1131,13 +1141,13 @@ class _DashboardScreenState extends State<DashboardScreen>
                 boxShadow: [
                   BoxShadow(
                     color: const Color(0xFF8B0000).withValues(alpha: 0.4),
-                    blurRadius: 25,
-                    offset: const Offset(0, 10),
+                    blurRadius: isVerySmallScreen ? 15 : 25,
+                    offset: Offset(0, isVerySmallScreen ? 6 : 10),
                   ),
                   BoxShadow(
                     color: const Color(0xFF000000).withValues(alpha: 0.6),
-                    blurRadius: 15,
-                    offset: const Offset(0, 5),
+                    blurRadius: isVerySmallScreen ? 10 : 15,
+                    offset: Offset(0, isVerySmallScreen ? 3 : 5),
                   ),
                 ],
               ),
@@ -1145,43 +1155,47 @@ class _DashboardScreenState extends State<DashboardScreen>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(20),
+                    padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 20)),
                     decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         colors: [Color(0xFFFFFFFF), Color(0xFFF0F0F0)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 20)),
                       boxShadow: [
                         BoxShadow(
                           color: const Color(0xFFFFFFFF).withValues(alpha: 0.4),
-                          blurRadius: 20,
-                          offset: const Offset(0, 8),
+                          blurRadius: isVerySmallScreen ? 12 : 20,
+                          offset: Offset(0, isVerySmallScreen ? 5 : 8),
                         ),
                         BoxShadow(
                           color: const Color(0xFF8B0000).withValues(alpha: 0.3),
-                          blurRadius: 10,
-                          offset: const Offset(0, 4),
+                          blurRadius: isVerySmallScreen ? 6 : 10,
+                          offset: Offset(0, isVerySmallScreen ? 2 : 4),
                         ),
                       ],
                     ),
-                    child: Icon(icon, color: const Color(0xFF8B0000), size: 32),
+                    child: Icon(
+                      icon, 
+                      color: const Color(0xFF8B0000), 
+                      size: isVerySmallScreen ? 20 : (isSmallScreen ? 24 : 32)
+                    ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: isVerySmallScreen ? 8 : (isSmallScreen ? 12 : 16)),
                   Text(
                     title,
-                    style: const TextStyle(
-                      fontSize: 18,
+                    style: TextStyle(
+                      fontSize: isVerySmallScreen ? 14 : (isSmallScreen ? 16 : 18),
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: isVerySmallScreen ? 4 : 8),
                   Text(
                     description,
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: isVerySmallScreen ? 11 : (isSmallScreen ? 12 : 14),
                       color: Colors.white.withValues(alpha: 0.8),
                       height: 1.4,
                     ),
@@ -1199,63 +1213,112 @@ class _DashboardScreenState extends State<DashboardScreen>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'Runner Code AI Tools',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 20,
+            fontSize: isVerySmallScreen ? 16 : (isSmallScreen ? 18 : 20),
             fontWeight: FontWeight.w700,
           ),
         ),
-        const SizedBox(height: 16),
-        Row(
-          children: [
-            Flexible(
-              child: _buildAIToolCard(
-                'OpenChat',
-                Icons.chat_bubble_outline,
-                const Color(0xFF8B0000),
-                'Advanced AI Chat Assistant',
-                () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const OpenChatScreen(),
+        SizedBox(height: isVerySmallScreen ? 12 : 16),
+        isVerySmallScreen 
+          ? Column(
+              children: [
+                _buildAIToolCard(
+                  'OpenChat',
+                  Icons.chat_bubble_outline,
+                  const Color(0xFF8B0000),
+                  'Advanced AI Chat Assistant',
+                  () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OpenChatScreen(),
+                    ),
+                  ),
+                  isVerySmallScreen,
+                ),
+                SizedBox(height: 8),
+                _buildAIToolCard(
+                  'Image Generator',
+                  Icons.image,
+                  const Color(0xFFB22222),
+                  'Create stunning AI images',
+                  () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ImageGeneratorScreen(),
+                    ),
+                  ),
+                  isVerySmallScreen,
+                ),
+                SizedBox(height: 8),
+                _buildAIToolCard(
+                  'Code Explainer',
+                  Icons.code,
+                  const Color(0xFF8B0000),
+                  'Understand code instantly',
+                  () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CodeExplainerScreen(),
+                    ),
+                  ),
+                  isVerySmallScreen,
+                ),
+              ],
+            )
+          : Row(
+              children: [
+                Flexible(
+                  child: _buildAIToolCard(
+                    'OpenChat',
+                    Icons.chat_bubble_outline,
+                    const Color(0xFF8B0000),
+                    'Advanced AI Chat Assistant',
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const OpenChatScreen(),
+                      ),
+                    ),
+                    isVerySmallScreen,
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Flexible(
-              child: _buildAIToolCard(
-                'Image Generator',
-                Icons.image,
-                const Color(0xFFB22222),
-                'Create stunning AI images',
-                () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ImageGeneratorScreen(),
+                SizedBox(width: isSmallScreen ? 8 : 12),
+                Flexible(
+                  child: _buildAIToolCard(
+                    'Image Generator',
+                    Icons.image,
+                    const Color(0xFFB22222),
+                    'Create stunning AI images',
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ImageGeneratorScreen(),
+                      ),
+                    ),
+                    isVerySmallScreen,
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Flexible(
-              child: _buildAIToolCard(
-                'Code Explainer',
-                Icons.code,
-                const Color(0xFF8B0000),
-                'Understand code instantly',
-                () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const CodeExplainerScreen(),
+                SizedBox(width: isSmallScreen ? 8 : 12),
+                Flexible(
+                  child: _buildAIToolCard(
+                    'Code Explainer',
+                    Icons.code,
+                    const Color(0xFF8B0000),
+                    'Understand code instantly',
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CodeExplainerScreen(),
+                      ),
+                    ),
+                    isVerySmallScreen,
                   ),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
       ],
     );
   }
@@ -1266,6 +1329,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     Color color,
     String description,
     VoidCallback onTap,
+    bool isVerySmallScreen,
   ) {
     return AnimatedBuilder(
       animation: _cardAnimation,

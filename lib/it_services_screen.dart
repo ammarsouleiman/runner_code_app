@@ -67,29 +67,40 @@ class _ITServicesScreenState extends State<ITServicesScreen>
       backgroundColor: const Color(0xFF000000),
       elevation: 0,
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back, color: Colors.white),
+        icon: Icon(
+          Icons.arrow_back, 
+          color: Colors.white,
+          size: isVerySmallScreen ? 20 : 24,
+        ),
         onPressed: () => Navigator.pop(context),
       ),
       title: Row(
         children: [
           Container(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(isVerySmallScreen ? 6 : 8),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [Color(0xFF8B0000), Color(0xFFB22222)],
               ),
-              borderRadius: BorderRadius.circular(8),
+              borderRadius: BorderRadius.circular(isVerySmallScreen ? 6 : 8),
             ),
-            child: const Icon(Icons.computer, color: Colors.white, size: 20),
+            child: Icon(
+              Icons.computer, 
+              color: Colors.white, 
+              size: isVerySmallScreen ? 16 : 20
+            ),
           ),
-          const SizedBox(width: 12),
-          const Text(
-            'IT Services',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 1.2,
+          SizedBox(width: isVerySmallScreen ? 8 : 12),
+          Flexible(
+            child: Text(
+              'IT Services',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: isVerySmallScreen ? 16 : (isSmallScreen ? 18 : 20),
+                fontWeight: FontWeight.w700,
+                letterSpacing: isVerySmallScreen ? 0.8 : 1.2,
+              ),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
@@ -121,24 +132,24 @@ class _ITServicesScreenState extends State<ITServicesScreen>
     return SingleChildScrollView(
       child: Column(
         children: [
-          _buildHeroSection(isSmallScreen),
-          const SizedBox(height: 32),
-          _buildServicesSection(isSmallScreen),
-          const SizedBox(height: 32),
-          _buildFeaturesSection(isSmallScreen),
-          const SizedBox(height: 32),
-          _buildTechnologiesSection(isSmallScreen),
-          const SizedBox(height: 32),
-          _buildProcessSection(isSmallScreen),
-          const SizedBox(height: 32),
-          _buildContactSection(isSmallScreen),
-          const SizedBox(height: 32),
+          _buildHeroSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 24 : 32),
+          _buildServicesSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 24 : 32),
+          _buildFeaturesSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 24 : 32),
+          _buildTechnologiesSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 24 : 32),
+          _buildProcessSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 24 : 32),
+          _buildContactSection(isSmallScreen, isVerySmallScreen),
+          SizedBox(height: isVerySmallScreen ? 24 : 32),
         ],
       ),
     );
   }
 
-  Widget _buildHeroSection(bool isSmallScreen) {
+  Widget _buildHeroSection(bool isSmallScreen, bool isVerySmallScreen) {
     return AnimatedBuilder(
       animation: _heroAnimation,
       builder: (context, child) {
@@ -148,7 +159,7 @@ class _ITServicesScreenState extends State<ITServicesScreen>
             opacity: _heroAnimation.value.clamp(0.0, 1.0),
             child: Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(24),
+              padding: EdgeInsets.all(isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
@@ -167,59 +178,59 @@ class _ITServicesScreenState extends State<ITServicesScreen>
                 children: [
                   // Hero Icon
                   Container(
-                    width: 80,
-                    height: 80,
+                    width: isVerySmallScreen ? 60 : (isSmallScreen ? 70 : 80),
+                    height: isVerySmallScreen ? 60 : (isSmallScreen ? 70 : 80),
                     decoration: BoxDecoration(
                       gradient: const LinearGradient(
                         colors: [Color(0xFF8B0000), Color(0xFFB22222)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(isVerySmallScreen ? 15 : (isSmallScreen ? 18 : 20)),
                       boxShadow: [
                         BoxShadow(
                           color: const Color(0xFF8B0000).withValues(alpha: 0.4),
-                          blurRadius: 20,
-                          offset: const Offset(0, 8),
+                          blurRadius: isVerySmallScreen ? 15 : 20,
+                          offset: Offset(0, isVerySmallScreen ? 6 : 8),
                         ),
                       ],
                     ),
-                    child: const Icon(
+                    child: Icon(
                       Icons.computer,
                       color: Colors.white,
-                      size: 40,
+                      size: isVerySmallScreen ? 28 : (isSmallScreen ? 32 : 40),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
 
                   // Title
-                  const Text(
+                  Text(
                     'Professional IT Solutions',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 28,
+                      fontSize: isVerySmallScreen ? 20 : (isSmallScreen ? 24 : 28),
                       fontWeight: FontWeight.w800,
-                      letterSpacing: 1.2,
+                      letterSpacing: isVerySmallScreen ? 0.8 : 1.2,
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: isVerySmallScreen ? 12 : 16),
 
                   // Subtitle
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 24),
-                    child: const Text(
+                    padding: EdgeInsets.symmetric(horizontal: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+                    child: Text(
                       'Transform your business with cutting-edge technology solutions. From web development to mobile apps, we deliver innovative digital solutions that drive growth.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.white70,
-                        fontSize: 16,
+                        fontSize: isVerySmallScreen ? 13 : (isSmallScreen ? 14 : 16),
                         height: 1.6,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  SizedBox(height: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
 
                   // CTA Button
                   Container(
@@ -229,12 +240,12 @@ class _ITServicesScreenState extends State<ITServicesScreen>
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: BorderRadius.circular(isVerySmallScreen ? 20 : 25),
                       boxShadow: [
                         BoxShadow(
                           color: const Color(0xFF8B0000).withValues(alpha: 0.4),
-                          blurRadius: 15,
-                          offset: const Offset(0, 6),
+                          blurRadius: isVerySmallScreen ? 12 : 15,
+                          offset: Offset(0, isVerySmallScreen ? 4 : 6),
                         ),
                       ],
                     ),
@@ -242,26 +253,26 @@ class _ITServicesScreenState extends State<ITServicesScreen>
                       color: Colors.transparent,
                       child: InkWell(
                         onTap: () => _showConsultationDialog(),
-                        borderRadius: BorderRadius.circular(25),
+                        borderRadius: BorderRadius.circular(isVerySmallScreen ? 20 : 25),
                         child: Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 32,
-                            vertical: 16,
+                          padding: EdgeInsets.symmetric(
+                            horizontal: isVerySmallScreen ? 20 : (isSmallScreen ? 28 : 32),
+                            vertical: isVerySmallScreen ? 12 : 16,
                           ),
-                          child: const Row(
+                          child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Icon(
                                 Icons.rocket_launch,
                                 color: Colors.white,
-                                size: 24,
+                                size: isVerySmallScreen ? 18 : (isSmallScreen ? 20 : 24),
                               ),
-                              SizedBox(width: 12),
+                              SizedBox(width: isVerySmallScreen ? 8 : 12),
                               Text(
                                 'Get Free Consultation',
                                 style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 16,
+                                  fontSize: isVerySmallScreen ? 13 : (isSmallScreen ? 14 : 16),
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
@@ -280,53 +291,57 @@ class _ITServicesScreenState extends State<ITServicesScreen>
     );
   }
 
-  Widget _buildServicesSection(bool isSmallScreen) {
+  Widget _buildServicesSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: EdgeInsets.symmetric(horizontal: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Our IT Services',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 24,
+              fontSize: isVerySmallScreen ? 18 : (isSmallScreen ? 20 : 24),
               fontWeight: FontWeight.w800,
-              letterSpacing: 1.0,
+              letterSpacing: isVerySmallScreen ? 0.5 : 1.0,
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: isVerySmallScreen ? 16 : 20),
           GridView.count(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            crossAxisCount: isSmallScreen ? 1 : 2,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 1.8,
+            crossAxisCount: isVerySmallScreen ? 1 : (isSmallScreen ? 1 : 2),
+            crossAxisSpacing: isVerySmallScreen ? 12 : 16,
+            mainAxisSpacing: isVerySmallScreen ? 12 : 16,
+            childAspectRatio: isVerySmallScreen ? 1.5 : 1.8,
             children: [
               _buildServiceCard(
                 'Web Development',
                 Icons.web,
                 'Custom websites and web applications built with modern technologies and responsive design for optimal user experience.',
                 const Color(0xFF00B4D8),
+                isVerySmallScreen,
               ),
               _buildServiceCard(
                 'Desktop Applications',
                 Icons.desktop_windows,
                 'Professional desktop software solutions for Windows, macOS, and Linux platforms with intuitive user interfaces.',
                 const Color(0xFF9B5DE5),
+                isVerySmallScreen,
               ),
               _buildServiceCard(
                 'Mobile Development',
                 Icons.phone_android,
                 'Native and cross-platform mobile applications for iOS and Android with cutting-edge features and performance.',
                 const Color(0xFF00F5D4),
+                isVerySmallScreen,
               ),
               _buildServiceCard(
                 'UI/UX Design',
                 Icons.design_services,
                 'User-centered design solutions that enhance user experience and drive engagement across all platforms.',
                 const Color(0xFFFF6B6B),
+                isVerySmallScreen,
               ),
             ],
           ),
@@ -340,85 +355,90 @@ class _ITServicesScreenState extends State<ITServicesScreen>
     IconData icon,
     String description,
     Color color,
+    bool isVerySmallScreen,
   ) {
     return AnimatedBuilder(
       animation: _cardAnimation,
       builder: (context, child) {
         return Transform.scale(
           scale: _cardAnimation.value.clamp(0.0, 1.0),
-          child: Container(
-            padding: const EdgeInsets.all(28),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xFF000000),
-                  Color(0xFF1A0000),
-                  Color(0xFF8B0000),
-                  Color(0xFFB22222),
+                      child: Container(
+              padding: EdgeInsets.all(isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 28)),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFF000000),
+                    Color(0xFF1A0000),
+                    Color(0xFF8B0000),
+                    Color(0xFFB22222),
+                  ],
+                  stops: [0.0, 0.4, 0.7, 1.0],
+                ),
+                borderRadius: BorderRadius.circular(isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
+                border: Border.all(
+                  color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
+                  width: 1,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFF8B0000).withValues(alpha: 0.4),
+                    blurRadius: isVerySmallScreen ? 15 : 25,
+                    offset: Offset(0, isVerySmallScreen ? 6 : 10),
+                  ),
+                  BoxShadow(
+                    color: const Color(0xFF000000).withValues(alpha: 0.6),
+                    blurRadius: isVerySmallScreen ? 10 : 15,
+                    offset: Offset(0, isVerySmallScreen ? 3 : 5),
+                  ),
                 ],
-                stops: [0.0, 0.4, 0.7, 1.0],
               ),
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(
-                color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
-                width: 1,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFF8B0000).withValues(alpha: 0.4),
-                  blurRadius: 25,
-                  offset: const Offset(0, 10),
-                ),
-                BoxShadow(
-                  color: const Color(0xFF000000).withValues(alpha: 0.6),
-                  blurRadius: 15,
-                  offset: const Offset(0, 5),
-                ),
-              ],
-            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 20)),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
                       colors: [Color(0xFFFFFFFF), Color(0xFFF0F0F0)],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(isVerySmallScreen ? 12 : (isSmallScreen ? 16 : 20)),
                     boxShadow: [
                       BoxShadow(
                         color: const Color(0xFFFFFFFF).withValues(alpha: 0.4),
-                        blurRadius: 20,
-                        offset: const Offset(0, 8),
+                        blurRadius: isVerySmallScreen ? 12 : 20,
+                        offset: Offset(0, isVerySmallScreen ? 5 : 8),
                       ),
                       BoxShadow(
                         color: const Color(0xFF8B0000).withValues(alpha: 0.3),
-                        blurRadius: 10,
-                        offset: const Offset(0, 4),
+                        blurRadius: isVerySmallScreen ? 6 : 10,
+                        offset: Offset(0, isVerySmallScreen ? 2 : 4),
                       ),
                     ],
                   ),
-                  child: Icon(icon, color: const Color(0xFF8B0000), size: 32),
+                  child: Icon(
+                    icon, 
+                    color: const Color(0xFF8B0000), 
+                    size: isVerySmallScreen ? 20 : (isSmallScreen ? 24 : 32)
+                  ),
                 ),
-                const SizedBox(height: 16),
+                SizedBox(height: isVerySmallScreen ? 8 : (isSmallScreen ? 12 : 16)),
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 18,
+                  style: TextStyle(
+                    fontSize: isVerySmallScreen ? 14 : (isSmallScreen ? 16 : 18),
                     fontWeight: FontWeight.w700,
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: isVerySmallScreen ? 4 : 8),
                 Text(
                   description,
                   style: TextStyle(
-                    fontSize: 14,
+                    fontSize: isVerySmallScreen ? 11 : (isSmallScreen ? 12 : 14),
                     color: Colors.white.withValues(alpha: 0.8),
                     height: 1.4,
                   ),
@@ -431,56 +451,60 @@ class _ITServicesScreenState extends State<ITServicesScreen>
     );
   }
 
-  Widget _buildFeaturesSection(bool isSmallScreen) {
+  Widget _buildFeaturesSection(bool isSmallScreen, bool isVerySmallScreen) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: EdgeInsets.symmetric(horizontal: isVerySmallScreen ? 16 : (isSmallScreen ? 20 : 24)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Why Choose Runner Code IT Services?',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 24,
+              fontSize: isVerySmallScreen ? 18 : (isSmallScreen ? 20 : 24),
               fontWeight: FontWeight.w800,
-              letterSpacing: 1.0,
+              letterSpacing: isVerySmallScreen ? 0.5 : 1.0,
             ),
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: isVerySmallScreen ? 16 : 20),
           _buildFeatureItem(
             Icons.rocket_launch,
             'Free Consultation',
             'Get expert advice and project planning with our complimentary consultation session.',
+            isVerySmallScreen,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: isVerySmallScreen ? 12 : 16),
           _buildFeatureItem(
             Icons.timeline,
             'Agile Development',
             'Iterative development process ensuring your project evolves with your business needs.',
+            isVerySmallScreen,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: isVerySmallScreen ? 12 : 16),
           _buildFeatureItem(
             Icons.security,
             'Quality Assurance',
             'Rigorous testing and quality control to deliver reliable and secure solutions.',
+            isVerySmallScreen,
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: isVerySmallScreen ? 12 : 16),
           _buildFeatureItem(
             Icons.support_agent,
             '24/7 Support',
             'Round-the-clock technical support and maintenance for all our delivered solutions.',
+            isVerySmallScreen,
           ),
         ],
       ),
     );
   }
 
-  Widget _buildFeatureItem(IconData icon, String title, String description) {
+  Widget _buildFeatureItem(IconData icon, String title, String description, bool isVerySmallScreen) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(isVerySmallScreen ? 12 : 16),
       decoration: BoxDecoration(
         color: const Color(0xFF8B0000).withValues(alpha: 0.05),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
         border: Border.all(
           color: const Color(0xFF8B0000).withValues(alpha: 0.2),
           width: 1,
@@ -489,36 +513,40 @@ class _ITServicesScreenState extends State<ITServicesScreen>
       child: Row(
         children: [
           Container(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(isVerySmallScreen ? 8 : 10),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [Color(0xFF8B0000), Color(0xFFB22222)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(isVerySmallScreen ? 8 : 10),
             ),
-            child: Icon(icon, color: Colors.white, size: 20),
+            child: Icon(
+              icon, 
+              color: Colors.white, 
+              size: isVerySmallScreen ? 16 : 20
+            ),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: isVerySmallScreen ? 12 : 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: isVerySmallScreen ? 14 : 16,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: isVerySmallScreen ? 2 : 4),
                 Text(
                   description,
                   style: TextStyle(
                     color: Colors.white.withValues(alpha: 0.7),
-                    fontSize: 14,
+                    fontSize: isVerySmallScreen ? 12 : 14,
                     height: 1.3,
                   ),
                 ),
