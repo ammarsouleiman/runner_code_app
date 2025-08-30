@@ -1,11 +1,11 @@
 {
-    "name": "runner_code_app",
-    "short_name": "runner_code_app",
+    "name": "Runner Code",
+    "short_name": "Runner Code",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#000000",
+    "theme_color": "#8B0000",
+    "description": "Runner Code - AI-Powered Development Assistant",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -566,29 +566,29 @@ class _DashboardScreenState extends State<DashboardScreen>
         Column(
           children: [
             _buildAboutWebsiteCard(
-              'Education',
+                'Education',
               'Professional Training',
-              Icons.school,
-              const Color(0xFF8B0000),
-              'Professional training and courses in programming, web development, and AI technologies. Learn from industry experts.',
-              () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const EducationScreen(),
+                Icons.school,
+                const Color(0xFF8B0000),
+                'Professional training and courses in programming, web development, and AI technologies. Learn from industry experts.',
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const EducationScreen(),
+                  ),
                 ),
               ),
-            ),
             const SizedBox(height: 16),
             _buildAboutWebsiteCard(
-              'IT Services',
+                'IT Services',
               'Complete Solutions',
-              Icons.computer,
-              const Color(0xFFB22222),
-              'Complete IT solutions including web development, mobile apps, system integration, and technical consulting.',
-              () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ITServicesScreen(),
+                Icons.computer,
+                const Color(0xFFB22222),
+                'Complete IT solutions including web development, mobile apps, system integration, and technical consulting.',
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ITServicesScreen(),
                 ),
               ),
             ),
@@ -1133,46 +1133,46 @@ class _DashboardScreenState extends State<DashboardScreen>
         Column(
           children: [
             _buildAIToolWebsiteCard(
-              'OpenChat',
+                'OpenChat',
               'AI Chat Assistant',
-              Icons.chat_bubble_outline,
-              const Color(0xFF8B0000),
+                Icons.chat_bubble_outline,
+                const Color(0xFF8B0000),
               'Advanced AI Chat Assistant with intelligent conversation capabilities and real-time responses.',
-              () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const OpenChatScreen(),
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OpenChatScreen(),
+                  ),
                 ),
               ),
-            ),
             const SizedBox(height: 16),
             _buildAIToolWebsiteCard(
-              'Image Generator',
+                'Image Generator',
               'AI Art Creator',
-              Icons.image,
-              const Color(0xFFB22222),
+                Icons.image,
+                const Color(0xFFB22222),
               'Create stunning AI-generated images with advanced algorithms and creative prompts.',
-              () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ImageGeneratorScreen(),
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ImageGeneratorScreen(),
+                  ),
                 ),
               ),
-            ),
             const SizedBox(height: 16),
             _buildAIToolWebsiteCard(
-              'Code Explainer',
+                'Code Explainer',
               'Code Analysis',
-              Icons.code,
-              const Color(0xFF8B0000),
+                Icons.code,
+                const Color(0xFF8B0000),
               'Understand code instantly with AI-powered analysis, debugging, and explanation features.',
-              () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const CodeExplainerScreen(),
+                () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CodeExplainerScreen(),
+                  ),
                 ),
               ),
-            ),
           ],
         ),
       ],
@@ -1621,53 +1621,53 @@ class _DashboardScreenState extends State<DashboardScreen>
                       ),
                     ] else ...[
                       // Desktop layout - grid
-                      Row(
-                        children: [
-                          Expanded(
-                            child: _buildContactMethod(
-                              Icons.email,
-                              'Email',
-                              'info@runner-code.com',
-                              'Send us an email',
-                              () => _launchEmail('info@runner-code.com'),
-                            ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _buildContactMethod(
+                            Icons.email,
+                            'Email',
+                            'info@runner-code.com',
+                            'Send us an email',
+                            () => _launchEmail('info@runner-code.com'),
                           ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: _buildContactMethod(
-                              Icons.phone,
-                              'Phone',
-                              '+961 79 161 153',
-                              'Call us directly',
-                              () => _launchPhone('+96179161153'),
-                            ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: _buildContactMethod(
+                            Icons.phone,
+                            'Phone',
+                            '+961 79 161 153',
+                            'Call us directly',
+                            () => _launchPhone('+96179161153'),
                           ),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: _buildContactMethod(
-                              Icons.access_time,
-                              'Hours',
-                              '24/7 Available',
-                              'Always here for you',
-                              () {},
-                            ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: _buildContactMethod(
+                            Icons.access_time,
+                            'Hours',
+                            '24/7 Available',
+                            'Always here for you',
+                            () {},
                           ),
-                          const SizedBox(width: 16),
-                          Expanded(
-                            child: _buildContactMethod(
-                              Icons.location_on,
-                              'Location',
-                              'Lebanon',
-                              'Serving globally',
-                              () {},
-                            ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: _buildContactMethod(
+                            Icons.location_on,
+                            'Location',
+                            'Lebanon',
+                            'Serving globally',
+                            () {},
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
+                    ),
                     ],
                     SizedBox(height: isSmallScreen ? 20 : 24),
                     // Quick contact button
@@ -1774,7 +1774,7 @@ class _DashboardScreenState extends State<DashboardScreen>
         ),
         const SizedBox(width: 12),
         Expanded(
-          child: Column(
+        child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -1822,43 +1822,43 @@ class _DashboardScreenState extends State<DashboardScreen>
     String subtitle,
   ) {
     return Column(
-      children: [
-        Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Icon(icon, color: const Color(0xFF8B0000), size: 24),
-        ),
-        const SizedBox(height: 12),
-        Text(
-          title,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          value,
-          style: const TextStyle(
-            color: Colors.white70,
-            fontSize: 12,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          subtitle,
-          style: const TextStyle(
-            color: Colors.white54,
-            fontSize: 10,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-      ],
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: const Color(0xFFFFFFFF).withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Icon(icon, color: const Color(0xFF8B0000), size: 24),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              title,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              value,
+              style: const TextStyle(
+                color: Colors.white70,
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              subtitle,
+              style: const TextStyle(
+                color: Colors.white54,
+                fontSize: 10,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
     );
   }
 
