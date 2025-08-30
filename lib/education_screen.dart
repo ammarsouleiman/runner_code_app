@@ -427,24 +427,32 @@ class _EducationScreenState extends State<EducationScreen>
                     size: isVerySmallScreen ? 20 : (isSmallScreen ? 24 : 32)
                   ),
                 ),
-                                  SizedBox(height: isVerySmallScreen ? 8 : (isSmallScreen ? 12 : 16)),
-                  Text(
+                SizedBox(height: isVerySmallScreen ? 8 : (isSmallScreen ? 12 : 16)),
+                Flexible(
+                  child: Text(
                     title,
                     style: TextStyle(
                       fontSize: isVerySmallScreen ? 14 : (isSmallScreen ? 16 : 18),
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
                     ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
                   ),
-                  SizedBox(height: isVerySmallScreen ? 4 : 8),
-                  Text(
+                ),
+                SizedBox(height: isVerySmallScreen ? 4 : 8),
+                Flexible(
+                  child: Text(
                     description,
                     style: TextStyle(
                       fontSize: isVerySmallScreen ? 11 : (isSmallScreen ? 12 : 14),
                       color: Colors.white.withValues(alpha: 0.8),
                       height: 1.4,
                     ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: isVerySmallScreen ? 3 : 4,
                   ),
+                ),
               ],
             ),
           ),
@@ -498,11 +506,15 @@ class _EducationScreenState extends State<EducationScreen>
   }
 
   Widget _buildFeatureItem(IconData icon, String title, String description) {
+    final screenSize = MediaQuery.of(context).size;
+    final isSmallScreen = screenSize.width < 600;
+    final isVerySmallScreen = screenSize.width < 400;
+    
     return Container(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(isVerySmallScreen ? 12 : (isSmallScreen ? 14 : 16)),
       decoration: BoxDecoration(
         color: const Color(0xFF8B0000).withValues(alpha: 0.05),
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(isVerySmallScreen ? 10 : 12),
         border: Border.all(
           color: const Color(0xFF8B0000).withValues(alpha: 0.2),
           width: 1,
@@ -511,38 +523,46 @@ class _EducationScreenState extends State<EducationScreen>
       child: Row(
         children: [
           Container(
-            padding: const EdgeInsets.all(10),
+            padding: EdgeInsets.all(isVerySmallScreen ? 8 : 10),
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [Color(0xFF8B0000), Color(0xFFB22222)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(isVerySmallScreen ? 8 : 10),
             ),
-            child: Icon(icon, color: Colors.white, size: 20),
+            child: Icon(
+              icon, 
+              color: Colors.white, 
+              size: isVerySmallScreen ? 16 : 20
+            ),
           ),
-          const SizedBox(width: 16),
+          SizedBox(width: isVerySmallScreen ? 12 : 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: isVerySmallScreen ? 14 : (isSmallScreen ? 15 : 16),
                     fontWeight: FontWeight.w700,
                   ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: isVerySmallScreen ? 2 : 4),
                 Text(
                   description,
                   style: TextStyle(
                     color: Colors.white.withValues(alpha: 0.7),
-                    fontSize: 14,
+                    fontSize: isVerySmallScreen ? 12 : (isSmallScreen ? 13 : 14),
                     height: 1.3,
                   ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: isVerySmallScreen ? 2 : 3,
                 ),
               ],
             ),
