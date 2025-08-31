@@ -88788,7 +88788,7 @@ aiA(a){var s=0,r=A.H(t.N),q,p,o,n,m
 var $async$z6=A.D(function(b,c){if(b===1)return A.E(c,r)
 while(true)switch(s){case 0:p=A.dS("https://openrouter.ai/api/v1/chat/completions",0,null)
 o=t.N
-n=A.aa(["Content-Type","application/json","Authorization","Bearer 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","HTTP-Referer","https://runner-code-app.com","X-Title","Code Explainer App"],o,o)
+n=A.aa(["Content-Type","application/json","Authorization","Bearer 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","HTTP-Referer","https://runner-code-app.com","X-Title","Code Explainer App"],o,o)
 s=3
 return A.A(A.ayJ(p,B.a0.hC(A.aa(["model","openai/gpt-3.5-turbo","messages",A.b([A.aa(["role","system","content","You are a helpful code explainer assistant. You help users understand code by providing clear, detailed explanations. Always respond in a helpful and educational manner."],o,o),A.aa(["role","user","content",a],o,o)],t.m0),"max_tokens",1000,"temperature",0.7],o,t.K),null),n),$async$z6)
 case 3:m=c
@@ -88876,7 +88876,7 @@ r.toString
 A.kZ(s,s,!0,s,new A.amu(this),r,s,!0,t.z)},
 J(a){var s=A.a6(a,null,t.w).w.a.a<600
 return A.ks(this.a5L(s),B.p,A.aw(A.b([A.bL(this.a65(s),1),this.a6_(s)],t.p),B.r,B.k,B.m,0,B.u))},
-a5L(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.amg(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.pW,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a0a],q),B.r,B.k,B.m,0,s)
+a5L(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.amg(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.pW,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a0b],q),B.r,B.k,B.m,0,s)
 return A.pg(A.b([A.U(s,B.mW,B.h,s,s,new A.W(s,s,s,A.P(12),s,B.aU,B.o),s,s,s,B.dM,s,s,s),B.aD,A.f0(s,s,B.lq,s,s,this.gaj1(),s,s,"Clear Chat"),B.aD],q),B.p,0,r,p)},
 a65(a){var s,r,q,p,o,n,m,l=this,k=null,j=l.f.length
 if(j===0&&!l.r){j=A.U(k,B.Ka,B.h,k,k,new A.W(k,k,k,A.P(12),A.b([new A.aJ(0,B.y,B.j.L(0.4),B.aw,10)],t.V),B.b2,B.o),k,50,k,k,k,k,50)
@@ -88887,7 +88887,7 @@ p=A.b([B.j.L(0.1),B.j.L(0.05)],t.W)
 o=A.P(10)
 n=A.bW(B.j.L(0.3),1)
 m=t.p
-return A.U(k,A.jy(A.aw(A.b([B.bh,j,B.E,B.a0c,B.cj,B.a_t,B.bh,s,B.aS,r,B.aS,q,B.bh,A.U(k,A.aZ(A.b([A.ci(B.Jx,B.j,k,14),B.TX,B.a_k],m),B.r,B.aR,B.aC,0,k),B.h,k,k,new A.W(k,k,n,o,k,new A.dG(B.b_,B.bK,B.au,p,k,k),B.o),k,k,k,B.IM,k,k,k),B.bh],m),B.r,B.k,B.m,0,B.u),B.aI,k,B.ap),B.h,k,k,B.fa,k,k,k,k,k,k,k)}s=l.r?1:0
+return A.U(k,A.jy(A.aw(A.b([B.bh,j,B.E,B.a0d,B.cj,B.a_u,B.bh,s,B.aS,r,B.aS,q,B.bh,A.U(k,A.aZ(A.b([A.ci(B.Jx,B.j,k,14),B.TX,B.a_l],m),B.r,B.aR,B.aC,0,k),B.h,k,k,new A.W(k,k,n,o,k,new A.dG(B.b_,B.bK,B.au,p,k,k),B.o),k,k,k,B.IM,k,k,k),B.bh],m),B.r,B.k,B.m,0,B.u),B.aI,k,B.ap),B.h,k,k,B.fa,k,k,k,k,k,k,k)}s=l.r?1:0
 return A.aAl(l.e,new A.amj(l,a),j+s,B.aI)},
 DR(a,b,c){var s=null,r=B.j.L(0.05),q=A.P(10),p=A.bW(B.j.L(0.2),1),o=A.P(6),n=t.p
 return A.U(s,A.aZ(A.b([A.U(s,A.ci(a,B.e,s,16),B.h,s,s,new A.W(s,s,s,o,s,B.b2,B.o),s,s,s,B.bC,s,s,s),B.BQ,A.bL(A.aw(A.b([A.a8(b,s,s,s,B.Cw,s,s,s),B.TZ,A.a8(c,s,s,s,A.br(s,s,B.e.L(0.7),s,s,s,s,s,s,s,s,11,s,s,B.v,s,1.2,!0,s,s,s,s,s,s,s,s),s,s,s)],n),B.B,B.k,B.m,0,B.u),1)],n),B.r,B.k,B.m,0,s),B.h,s,s,new A.W(r,s,p,q,s,s,B.o),s,s,s,B.fx,s,s,s)},
@@ -89044,13 +89044,13 @@ s.l()
 this.a3U()},
 J(a){var s=this,r=null,q=A.a6(a,r,t.w).w.a.a<600,p=A.P(8),o=t.p
 p=A.aZ(A.b([A.U(r,A.pr(A.P(8),A.up("assets/images/images.png",B.dD,32,32)),B.h,r,r,new A.W(r,r,r,p,r,r,B.o),r,32,r,r,r,r,32),B.aA,B.a0i],o),B.r,B.k,B.m,0,r)
-return A.ks(A.pg(A.b([A.f0(r,r,B.K8,r,r,s.ga7N(),r,r,"Delete Account"),B.aD,A.f0(r,r,B.Kb,r,r,s.gaet(),r,r,"Logout")],o),B.p,0,r,p),B.bX,A.jy(A.aw(A.b([s.a6m(q),B.aX,s.a6a(q),B.aX,s.a5I(q),B.aX,A.aw(A.b([B.a0j,B.E,s.a5U()],o),B.B,B.k,B.m,0,B.u),B.aX,A.aw(A.b([B.a_S,B.E,s.a5V()],o),B.B,B.k,B.m,0,B.u),B.aX,s.a5H(q),B.aX,A.aw(A.b([B.a_7,B.E,A.aw(A.b([s.DT("Runner Code","Official Website",B.JJ,B.j,"https://runner-code.com/","Professional programming education, IT services, and high-quality websites."),B.E,s.DT("Runner Code Studio","Code Editor",B.Z,B.bL,"https://studio.runner-code.com/","Write, run, and test code in real-time across multiple programming languages."),B.E,s.DT("Runner Code AI","AI Tools",B.fF,B.j,"https://ai.runner-code.com/","Smart AI tools for developers, creators, and professionals.")],o),B.r,B.k,B.m,0,B.u)],o),B.B,B.k,B.m,0,B.u),B.aX,s.a5Q(q)],o),B.B,B.k,B.m,0,B.u),B.aI,r,B.ap))},
+return A.ks(A.pg(A.b([A.f0(r,r,B.K8,r,r,s.ga7N(),r,r,"Delete Account"),B.aD,A.f0(r,r,B.Kb,r,r,s.gaet(),r,r,"Logout")],o),B.p,0,r,p),B.bX,A.jy(A.aw(A.b([s.a6m(q),B.aX,s.a6a(q),B.aX,s.a5I(q),B.aX,A.aw(A.b([B.a0j,B.E,s.a5U()],o),B.B,B.k,B.m,0,B.u),B.aX,A.aw(A.b([B.a_T,B.E,s.a5V()],o),B.B,B.k,B.m,0,B.u),B.aX,s.a5H(q),B.aX,A.aw(A.b([B.a_8,B.E,A.aw(A.b([s.DT("Runner Code","Official Website",B.JJ,B.j,"https://runner-code.com/","Professional programming education, IT services, and high-quality websites."),B.E,s.DT("Runner Code Studio","Code Editor",B.Z,B.bL,"https://studio.runner-code.com/","Write, run, and test code in real-time across multiple programming languages."),B.E,s.DT("Runner Code AI","AI Tools",B.fF,B.j,"https://ai.runner-code.com/","Smart AI tools for developers, creators, and professionals.")],o),B.r,B.k,B.m,0,B.u)],o),B.B,B.k,B.m,0,B.u),B.aX,s.a5Q(q)],o),B.B,B.k,B.m,0,B.u),B.aI,r,B.ap))},
 a6m(a){var s=this.r
 s===$&&A.a()
 return A.dp(s,new A.anF(this),null)},
-a6a(a){var s=this,r=null,q=t.p,p=A.aZ(A.b([A.U(r,B.Kr,B.h,r,r,new A.W(r,r,r,A.P(8),r,B.aU,B.o),r,r,r,B.cO,r,r,r),B.aA,B.a_u,B.Ug,A.U(r,B.a_q,B.h,r,r,new A.W(B.j,r,r,A.P(12),r,r,B.o),r,r,r,B.II,r,r,r)],q),B.r,B.k,B.m,0,r),o=A.P(16),n=A.bW(B.j.L(0.3),1),m=A.b([new A.aJ(0,B.y,B.j.L(0.1),B.bg,20)],t.V),l=s.e
+a6a(a){var s=this,r=null,q=t.p,p=A.aZ(A.b([A.U(r,B.Kr,B.h,r,r,new A.W(r,r,r,A.P(8),r,B.aU,B.o),r,r,r,B.cO,r,r,r),B.aA,B.a_v,B.Ug,A.U(r,B.a_r,B.h,r,r,new A.W(B.j,r,r,A.P(12),r,r,B.o),r,r,r,B.II,r,r,r)],q),B.r,B.k,B.m,0,r),o=A.P(16),n=A.bW(B.j.L(0.3),1),m=A.b([new A.aJ(0,B.y,B.j.L(0.1),B.bg,20)],t.V),l=s.e
 l===$&&A.a()
-return A.aw(A.b([p,B.E,A.U(r,A.oc(B.dy,A.b([A.aAD(0,A.dp(l,new A.anA(s),r)),new A.by(B.aI,A.aw(A.b([A.aZ(A.b([A.U(r,B.Ko,B.h,r,r,new A.W(B.j.L(0.2),r,r,A.P(8),r,r,B.o),r,r,r,B.cO,r,r,r),B.aA,B.J6,A.U(r,B.a_P,B.h,r,r,new A.W(B.hK,r,r,A.P(8),r,r,B.o),r,r,r,B.dM,r,r,r)],q),B.r,B.k,B.m,0,r),B.aS,A.bL(A.dp(s.e,new A.anB(s),r),1)],q),B.B,B.k,B.m,0,B.u),r),A.aAD(0,A.dp(s.e,new A.anC(s),r))],q),B.C,B.dq),B.h,r,r,new A.W(r,r,n,o,m,B.Lh,B.o),r,160,r,r,r,r,r)],q),B.B,B.k,B.m,0,B.u)},
+return A.aw(A.b([p,B.E,A.U(r,A.oc(B.dy,A.b([A.aAD(0,A.dp(l,new A.anA(s),r)),new A.by(B.aI,A.aw(A.b([A.aZ(A.b([A.U(r,B.Ko,B.h,r,r,new A.W(B.j.L(0.2),r,r,A.P(8),r,r,B.o),r,r,r,B.cO,r,r,r),B.aA,B.J6,A.U(r,B.a_Q,B.h,r,r,new A.W(B.hK,r,r,A.P(8),r,r,B.o),r,r,r,B.dM,r,r,r)],q),B.r,B.k,B.m,0,r),B.aS,A.bL(A.dp(s.e,new A.anB(s),r),1)],q),B.B,B.k,B.m,0,B.u),r),A.aAD(0,A.dp(s.e,new A.anC(s),r))],q),B.C,B.dq),B.h,r,r,new A.W(r,r,n,o,m,B.Lh,B.o),r,160,r,r,r,r,r)],q),B.B,B.k,B.m,0,B.u)},
 a6b(){var s,r,q,p,o="color",n=null,m=t.N,l=t.z,k=A.aa(["icon","\ud83c\udf93","title","Free Programming Course Launched","content","Runner Code launches comprehensive free programming course with 1000+ students enrolled","color",B.hK],m,l),j=A.aa(["icon","\ud83c\udf10","title","Free Website Templates Available","content","Professional website templates now free for download - Dark Joe, Consolution, Minimus & more","color",B.kl],m,l),i=A.aa(["icon","\ud83d\udcbc","title","IT Services Expansion","content","Runner Code expands IT services to web development, mobile apps, and desktop applications","color",B.G2],m,l),h=A.aa(["icon","\ud83e\udd16","title","AI Studio Platform Live","content","Advanced AI tools including image generation and code explanation now available","color",B.k7],m,l),g=A.aa(["icon","\ud83d\udcf1","title","Mobile App Development","content","iOS and Android app development services with Flutter and React Native expertise","color",B.k8],m,l),f=A.aa(["icon","\ud83c\udfaf","title","24/7 Support Available","content","Round-the-clock technical support and consultation services now live","color",B.GH],m,l),e=A.aa(["icon","\ud83c\udfc6","title","Certified Education Program","content","Professional programming education with certified diplomas upon completion","color",B.j],m,l)
 l=A.aa(["icon","\u26a1","title","Real-time Code Analysis","content","Instant code explanation and debugging with advanced AI assistance","color",B.Gb],m,l)
 m=this.e
@@ -89070,7 +89070,7 @@ l=p===s?r.h(0,o):B.e.L(0.2)
 k=new A.aX(1,1)
 q[p]=new A.k9(1,B.dj,A.U(n,n,B.h,n,n,new A.W(l,n,n,new A.cF(k,k,k,k),n,n,B.o),n,2,new A.ab(0,0,m,0),n,n,n,n),n)}return A.aw(A.b([e,B.bO,A.aZ(q,B.r,B.k,B.m,0,n)],g),B.r,B.k,B.m,0,B.u)},
 a5I(a){var s=this,r=t.p
-return A.aw(A.b([B.a_J,B.E,A.aw(A.b([s.Nd("Education","Professional Training",B.lp,B.j,"Professional training and courses in programming, web development, and AI technologies. Learn from industry experts.",new A.anj(s)),B.E,s.Nd("IT Services","Complete Solutions",B.ll,B.bL,"Complete IT solutions including web development, mobile apps, system integration, and technical consulting.",new A.ank(s))],r),B.r,B.k,B.m,0,B.u)],r),B.B,B.k,B.m,0,B.u)},
+return A.aw(A.b([B.a_K,B.E,A.aw(A.b([s.Nd("Education","Professional Training",B.lp,B.j,"Professional training and courses in programming, web development, and AI technologies. Learn from industry experts.",new A.anj(s)),B.E,s.Nd("IT Services","Complete Solutions",B.ll,B.bL,"Complete IT solutions including web development, mobile apps, system integration, and technical consulting.",new A.ank(s))],r),B.r,B.k,B.m,0,B.u)],r),B.B,B.k,B.m,0,B.u)},
 a5U(){var s=this.r
 s===$&&A.a()
 return A.dp(s,new A.anx(this),null)},
@@ -89261,7 +89261,7 @@ break}p=5
 s=8
 return A.A(n.d.l6(),$async$tN)
 case 8:k=n.c
-if(k!=null){k.a2(t.q).f.cg(A.dr(null,null,null,B.hQ,B.bP,B.C,null,B.a_Q,null,B.cN,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
+if(k!=null){k.a2(t.q).f.cg(A.dr(null,null,null,B.hQ,B.bP,B.C,null,B.a_R,null,B.cN,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
 k=n.c
 k.toString
 A.bY(k,!1).Yt("/",new A.anP(),t.X)}p=2
@@ -89320,7 +89320,7 @@ m=A.P(24)
 r=t.V
 q=A.b([new A.aJ(0,B.y,B.j.L(0.4),B.PO,30),new A.aJ(0,B.y,B.p.L(0.6),B.cw,15)],r)
 p=t.p
-return A.mj(A.U(o,A.aZ(A.b([A.U(o,B.Km,B.h,o,o,new A.W(o,o,o,A.P(20),A.b([new A.aJ(0,B.y,B.e.L(0.3),B.cw,15)],r),B.cR,B.o),o,o,o,B.aO,o,o,o),B.mB,A.bL(A.aw(A.b([B.a0d,B.bO,A.a8(n.a.d,o,o,o,B.Ye,o,o,o),B.cj,B.a_m],p),B.B,B.k,B.m,0,B.u),1)],p),B.r,B.k,B.m,0,o),B.h,o,o,new A.W(o,o,o,m,q,B.Lj,B.o),o,o,o,B.IV,o,o,1/0),s)},
+return A.mj(A.U(o,A.aZ(A.b([A.U(o,B.Km,B.h,o,o,new A.W(o,o,o,A.P(20),A.b([new A.aJ(0,B.y,B.e.L(0.3),B.cw,15)],r),B.cR,B.o),o,o,o,B.aO,o,o,o),B.mB,A.bL(A.aw(A.b([B.ZZ,B.bO,A.a8(n.a.d,o,o,o,B.Ye,o,o,o),B.cj,B.a_n],p),B.B,B.k,B.m,0,B.u),1)],p),B.r,B.k,B.m,0,o),B.h,o,o,new A.W(o,o,o,m,q,B.Lj,B.o),o,o,o,B.IV,o,o,1/0),s)},
 $S:19}
 A.anA.prototype={
 $2(a,b){var s=null,r=this.a.e
@@ -89370,7 +89370,7 @@ o=A.b([new A.aJ(0,B.y,B.j.L(0.4),B.cT,25),new A.aJ(0,B.y,B.p.L(0.6),B.cU,15)],p)
 n=A.U(k,B.K1,B.h,k,k,new A.W(k,k,k,A.P(20),A.b([new A.aJ(0,B.y,B.e.L(0.4),B.bg,20),new A.aJ(0,B.y,B.j.L(0.3),B.aw,10)],p),B.cR,B.o),k,k,k,B.aO,k,k,k)
 m=A.P(25)
 l=t.p
-return A.mj(A.ec(!1,i,!0,A.U(k,A.aZ(A.b([n,B.mB,A.bL(A.aw(A.b([B.a_h,B.cj,B.a_i,B.aS,A.aZ(A.b([A.U(k,B.CD,B.h,k,k,new A.W(k,k,A.bW(B.j,2),m,A.b([new A.aJ(0,B.y,B.e.L(0.4),B.aw,10)],p),B.lu,B.o),k,k,k,B.kG,k,k,k),B.aD,A.U(k,B.dR,B.h,k,k,new A.W(B.e.L(0.2),k,k,A.P(8),k,k,B.o),k,k,k,B.dL,k,k,k)],l),B.r,B.k,B.m,0,k)],l),B.B,B.k,B.m,0,B.u),1)],l),B.r,B.k,B.m,0,k),B.h,k,k,new A.W(k,k,q,r,o,B.dl,B.o),k,k,k,B.dK,k,k,1/0),k,!0,k,k,k,k,k,k,k,k,k,new A.anw(j),k,k,k,k),s)},
+return A.mj(A.ec(!1,i,!0,A.U(k,A.aZ(A.b([n,B.mB,A.bL(A.aw(A.b([B.a_i,B.cj,B.a_j,B.aS,A.aZ(A.b([A.U(k,B.CD,B.h,k,k,new A.W(k,k,A.bW(B.j,2),m,A.b([new A.aJ(0,B.y,B.e.L(0.4),B.aw,10)],p),B.lu,B.o),k,k,k,B.kG,k,k,k),B.aD,A.U(k,B.dR,B.h,k,k,new A.W(B.e.L(0.2),k,k,A.P(8),k,k,B.o),k,k,k,B.dL,k,k,k)],l),B.r,B.k,B.m,0,k)],l),B.B,B.k,B.m,0,B.u),1)],l),B.r,B.k,B.m,0,k),B.h,k,k,new A.W(k,k,q,r,o,B.dl,B.o),k,k,k,B.dK,k,k,1/0),k,!0,k,k,k,k,k,k,k,k,k,new A.anw(j),k,k,k,k),s)},
 $S:19}
 A.anw.prototype={
 $0(){return this.a.tH()},
@@ -89388,7 +89388,7 @@ o=A.b([new A.aJ(0,B.y,B.j.L(0.4),B.cT,25),new A.aJ(0,B.y,B.p.L(0.6),B.cU,15)],p)
 n=A.U(k,B.Kd,B.h,k,k,new A.W(k,k,k,A.P(20),A.b([new A.aJ(0,B.y,B.e.L(0.4),B.bg,20),new A.aJ(0,B.y,B.j.L(0.3),B.aw,10)],p),B.cR,B.o),k,k,k,B.aO,k,k,k)
 m=A.P(25)
 l=t.p
-return A.mj(A.ec(!1,i,!0,A.U(k,A.aZ(A.b([n,B.mB,A.bL(A.aw(A.b([B.a_b,B.cj,B.a_Y,B.aS,A.aZ(A.b([A.U(k,B.CD,B.h,k,k,new A.W(k,k,A.bW(B.j,2),m,A.b([new A.aJ(0,B.y,B.e.L(0.4),B.aw,10)],p),B.lu,B.o),k,k,k,B.kG,k,k,k),B.aD,A.U(k,B.dR,B.h,k,k,new A.W(B.e.L(0.2),k,k,A.P(8),k,k,B.o),k,k,k,B.dL,k,k,k)],l),B.r,B.k,B.m,0,k)],l),B.B,B.k,B.m,0,B.u),1)],l),B.r,B.k,B.m,0,k),B.h,k,k,new A.W(k,k,q,r,o,B.dl,B.o),k,k,k,B.dK,k,k,1/0),k,!0,k,k,k,k,k,k,k,k,k,new A.any(j),k,k,k,k),s)},
+return A.mj(A.ec(!1,i,!0,A.U(k,A.aZ(A.b([n,B.mB,A.bL(A.aw(A.b([B.a_c,B.cj,B.a_Z,B.aS,A.aZ(A.b([A.U(k,B.CD,B.h,k,k,new A.W(k,k,A.bW(B.j,2),m,A.b([new A.aJ(0,B.y,B.e.L(0.4),B.aw,10)],p),B.lu,B.o),k,k,k,B.kG,k,k,k),B.aD,A.U(k,B.dR,B.h,k,k,new A.W(B.e.L(0.2),k,k,A.P(8),k,k,B.o),k,k,k,B.dL,k,k,k)],l),B.r,B.k,B.m,0,k)],l),B.B,B.k,B.m,0,B.u),1)],l),B.r,B.k,B.m,0,k),B.h,k,k,new A.W(k,k,q,r,o,B.dl,B.o),k,k,k,B.dK,k,k,1/0),k,!0,k,k,k,k,k,k,k,k,k,new A.any(j),k,k,k,k),s)},
 $S:19}
 A.any.prototype={
 $0(){return this.a.tI()},
@@ -89531,7 +89531,7 @@ $0(){return this.a.tJ(this.b)},
 $S:0}
 A.anS.prototype={
 $1(a){var s=null,r=A.P(20)
-return A.pc(A.b([A.eM(B.a_I,new A.anQ(a),s),A.u9(B.a_v,new A.anR(this.a,a),A.ua(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,new A.bG(A.P(12),B.q),s,s,s,s,s))],t.p),B.aN,B.a_g,new A.bG(r,B.q),B.CA)},
+return A.pc(A.b([A.eM(B.a_J,new A.anQ(a),s),A.u9(B.a_w,new A.anR(this.a,a),A.ua(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,new A.bG(A.P(12),B.q),s,s,s,s,s))],t.p),B.aN,B.a_h,new A.bG(r,B.q),B.CA)},
 $S:42}
 A.anQ.prototype={
 $0(){return A.bY(this.a,!1).cu()},
@@ -89542,7 +89542,7 @@ this.a.nn("info@runner-code.com")},
 $S:0}
 A.anO.prototype={
 $1(a){var s=null,r=A.P(16)
-return A.pc(A.b([A.eM(B.Cz,new A.anM(a),s),A.u9(B.a_n,new A.anN(a),A.ua(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,new A.bG(A.P(12),B.q),s,s,s,s,s))],t.p),B.aN,B.a_D,new A.bG(r,B.q),B.a_8)},
+return A.pc(A.b([A.eM(B.Cz,new A.anM(a),s),A.u9(B.a_o,new A.anN(a),A.ua(s,s,B.j,s,s,s,s,s,s,s,s,s,s,s,new A.bG(A.P(12),B.q),s,s,s,s,s))],t.p),B.aN,B.a_E,new A.bG(r,B.q),B.a_9)},
 $S:42}
 A.anM.prototype={
 $0(){return A.bY(this.a,!1).ie(!1)},
@@ -89558,8 +89558,8 @@ $1(a){var s,r,q,p=null,o=$.ak(),n=new A.ds(B.aF,o),m=new A.ds(B.aF,o),l=new A.bU
 o=A.P(16)
 s=this.a
 r=t.p
-q=A.bV(A.a61(p,A.aw(A.b([B.a_M,B.bh,A.w1(!1,n,B.KS,!1,p,p,p,1,!1,p,p,p,p,p,B.d_,B.ae,p,new A.anG(s)),B.E,A.w1(!1,m,B.KR,!1,p,p,p,1,!0,p,p,p,p,p,B.d_,B.ae,p,new A.anH()),B.E,B.a_U],r),B.B,B.k,B.aC,0,B.u),l),p,400)
-return A.pc(A.b([A.eM(B.Cz,new A.anI(a),p),A.u9(B.a0m,new A.anJ(s,l,n,m,a),A.ua(p,p,B.eB,p,p,p,p,p,p,p,p,p,p,p,new A.bG(A.P(12),B.q),p,p,p,p,p))],r),B.aN,q,new A.bG(o,B.q),B.a_N)},
+q=A.bV(A.a61(p,A.aw(A.b([B.a_N,B.bh,A.w1(!1,n,B.KS,!1,p,p,p,1,!1,p,p,p,p,p,B.d_,B.ae,p,new A.anG(s)),B.E,A.w1(!1,m,B.KR,!1,p,p,p,1,!0,p,p,p,p,p,B.d_,B.ae,p,new A.anH()),B.E,B.a_V],r),B.B,B.k,B.aC,0,B.u),l),p,400)
+return A.pc(A.b([A.eM(B.Cz,new A.anI(a),p),A.u9(B.a0m,new A.anJ(s,l,n,m,a),A.ua(p,p,B.eB,p,p,p,p,p,p,p,p,p,p,p,new A.bG(A.P(12),B.q),p,p,p,p,p))],r),B.aN,q,new A.bG(o,B.q),B.a_O)},
 $S:42}
 A.anG.prototype={
 $1(a){if(a.length===0)return"Please enter your email"
@@ -89951,8 +89951,8 @@ s===$&&A.a()
 s.l()
 this.a3Y()},
 J(a){var s=this,r=null,q=A.a6(a,r,t.w).w.a.a<600,p=t.p
-return A.ks(s.a8t(q),B.p,A.jy(A.aw(A.b([s.a8v(q),B.bi,A.U(r,A.aw(A.b([B.a0f,B.bh,A.aw(A.b([s.y4("Online Learning Platform","Zoom Sessions",B.JL,"Interactive learning sessions via Zoom with real-time coding practice and instant feedback from expert instructors.",B.hK),B.E,s.y4("Flexible Scheduling","2+ Sessions/Week",B.lo,"Choose your preferred time slots with minimum 2 sessions per week. Perfect for busy professionals and students.",B.kl),B.E,s.y4("Expert Instructors","Industry Professionals",B.fE,"Learn from industry professionals with years of experience in software development and teaching.",B.k7),B.E,s.y4("Certified Programs","International Certificates",B.pO,"Receive internationally recognized certificates upon course completion, enhancing your professional portfolio.",B.k8)],p),B.r,B.k,B.m,0,B.u)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_4,B.bh,s.y0(B.JV,"Free Demo Session","Experience our teaching methodology with a complimentary 1-hour demo session before committing."),B.E,s.y0(B.pN,"Flexible Learning Path","Customize your learning journey based on your goals, experience level, and preferred programming languages."),B.E,s.y0(B.JH,"Small Group Sessions","Learn in intimate groups ensuring personalized attention and better interaction with instructors."),B.E,s.y0(B.Jt,"Practical Projects","Build real-world projects to apply your knowledge and create an impressive portfolio.")],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a02,B.bh,A.aB7(A.b([s.lT("Python",B.Z,B.om),s.lT("C++",B.Z,B.oa),s.lT("C#",B.Z,B.oc),s.lT("Java",B.Z,B.oB),s.lT("HTML",B.Z,B.oF),s.lT("CSS",B.Z,B.oI),s.lT("JavaScript",B.Z,B.oG),s.lT("PHP",B.Z,B.oJ)],p),12,12)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_s,B.bh,s.y3(1,"Book Free Demo","Schedule your complimentary 1-hour demo session to experience our teaching style.",B.pA),B.E,s.y3(2,"Choose Your Path","Select your preferred programming language and learning schedule (minimum 2 sessions/week).",B.JY),B.E,s.y3(3,"Start Learning","Begin your journey with expert instructors in interactive online sessions.",B.pK),B.E,s.y3(4,"Get Certified","Complete your course and receive an internationally recognized certificate.",B.pO)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,s.a8u(q),B.bi],p),B.r,B.k,B.m,0,B.u),r,r,B.ap))},
-a8t(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.aoA(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.Kg,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a01],q),B.r,B.k,B.m,0,s)
+return A.ks(s.a8t(q),B.p,A.jy(A.aw(A.b([s.a8v(q),B.bi,A.U(r,A.aw(A.b([B.a0f,B.bh,A.aw(A.b([s.y4("Online Learning Platform","Zoom Sessions",B.JL,"Interactive learning sessions via Zoom with real-time coding practice and instant feedback from expert instructors.",B.hK),B.E,s.y4("Flexible Scheduling","2+ Sessions/Week",B.lo,"Choose your preferred time slots with minimum 2 sessions per week. Perfect for busy professionals and students.",B.kl),B.E,s.y4("Expert Instructors","Industry Professionals",B.fE,"Learn from industry professionals with years of experience in software development and teaching.",B.k7),B.E,s.y4("Certified Programs","International Certificates",B.pO,"Receive internationally recognized certificates upon course completion, enhancing your professional portfolio.",B.k8)],p),B.r,B.k,B.m,0,B.u)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_5,B.bh,s.y0(B.JV,"Free Demo Session","Experience our teaching methodology with a complimentary 1-hour demo session before committing."),B.E,s.y0(B.pN,"Flexible Learning Path","Customize your learning journey based on your goals, experience level, and preferred programming languages."),B.E,s.y0(B.JH,"Small Group Sessions","Learn in intimate groups ensuring personalized attention and better interaction with instructors."),B.E,s.y0(B.Jt,"Practical Projects","Build real-world projects to apply your knowledge and create an impressive portfolio.")],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a03,B.bh,A.aB7(A.b([s.lT("Python",B.Z,B.om),s.lT("C++",B.Z,B.oa),s.lT("C#",B.Z,B.oc),s.lT("Java",B.Z,B.oB),s.lT("HTML",B.Z,B.oF),s.lT("CSS",B.Z,B.oI),s.lT("JavaScript",B.Z,B.oG),s.lT("PHP",B.Z,B.oJ)],p),12,12)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_t,B.bh,s.y3(1,"Book Free Demo","Schedule your complimentary 1-hour demo session to experience our teaching style.",B.pA),B.E,s.y3(2,"Choose Your Path","Select your preferred programming language and learning schedule (minimum 2 sessions/week).",B.JY),B.E,s.y3(3,"Start Learning","Begin your journey with expert instructors in interactive online sessions.",B.pK),B.E,s.y3(4,"Get Certified","Complete your course and receive an internationally recognized certificate.",B.pO)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,s.a8u(q),B.bi],p),B.r,B.k,B.m,0,B.u),r,r,B.ap))},
+a8t(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.aoA(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.Kg,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a02],q),B.r,B.k,B.m,0,s)
 return A.pg(A.b([A.U(s,B.CI,B.h,s,s,new A.W(s,s,s,A.P(12),s,B.aU,B.o),s,s,s,B.dM,s,s,s),B.aD],q),B.p,0,r,p)},
 a8v(a){var s=this.f
 s===$&&A.a()
@@ -89967,7 +89967,7 @@ return A.U(s,A.aZ(A.b([A.ci(b,c,s,18),B.aD,A.a8(a,s,s,s,A.br(s,s,c,s,s,s,s,s,s,s
 y3(a,b,c,d){var s=null,r=B.j.L(0.05),q=A.P(12),p=A.bW(B.j.L(0.2),1),o=A.P(20),n=t.p
 return A.U(s,A.aZ(A.b([A.U(s,A.e8(A.a8(B.f.k(a),s,s,s,B.eY,s,s,s),s,s),B.h,s,s,new A.W(s,s,s,o,s,B.aU,B.o),s,40,s,s,s,s,40),B.c0,A.bL(A.aw(A.b([A.a8(b,s,s,s,B.bJ,s,s,s),B.bO,A.a8(c,s,s,s,A.br(s,s,B.e.L(0.7),s,s,s,s,s,s,s,s,14,s,s,s,s,1.3,!0,s,s,s,s,s,s,s,s),s,s,s)],n),B.B,B.k,B.m,0,B.u),1),A.ci(d,B.j,s,24)],n),B.r,B.k,B.m,0,s),B.h,s,s,new A.W(r,s,p,q,s,s,B.o),s,s,s,B.aI,s,s,s)},
 a8u(a){var s=this,r=null,q=A.b([B.j.L(0.1),B.j.L(0.05)],t.W),p=A.P(16),o=A.bW(B.j.L(0.3),1),n=t.p
-return A.U(r,A.aw(A.b([B.a_0,B.E,B.a_y,B.aX,A.aZ(A.b([s.Ot("Book Demo",B.pA,new A.aoB(s)),B.c0,s.Ot("Contact Us",B.ln,new A.aoC(s))],n),B.r,B.aR,B.m,0,r)],n),B.r,B.k,B.m,0,B.u),B.h,r,r,new A.W(r,r,o,p,r,new A.dG(B.b_,B.bK,B.au,q,r,r),B.o),r,r,r,B.fz,r,r,r)},
+return A.U(r,A.aw(A.b([B.a_1,B.E,B.a_z,B.aX,A.aZ(A.b([s.Ot("Book Demo",B.pA,new A.aoB(s)),B.c0,s.Ot("Contact Us",B.ln,new A.aoC(s))],n),B.r,B.aR,B.m,0,r)],n),B.r,B.k,B.m,0,B.u),B.h,r,r,new A.W(r,r,o,p,r,new A.dG(B.b_,B.bK,B.au,q,r,r),B.o),r,r,r,B.fz,r,r,r)},
 Ot(a,b,c){var s=null,r=A.P(25),q=A.b([new A.aJ(0,B.y,B.j.L(0.4),B.aw,12)],t.V)
 return A.U(s,A.ev(B.P,s,A.ec(!1,A.P(25),!0,A.U(s,A.aZ(A.b([A.ci(b,B.e,s,20),B.aD,A.a8(a,s,s,s,B.Cs,s,s,s)],t.p),B.r,B.k,B.aC,0,s),B.h,s,s,s,s,s,s,B.i1,s,s,s),s,!0,s,s,s,s,s,s,s,s,s,c,s,s,s,s),B.h,B.D,0,s,s,s,s,s,B.b3),B.h,s,s,new A.W(s,s,s,r,q,B.b2,B.o),s,s,s,s,s,s,s)},
 Sz(){var s=null,r=this.c
@@ -89997,7 +89997,7 @@ q=A.U(n,B.K6,B.h,n,n,new A.W(n,n,n,A.P(20),A.b([new A.aJ(0,B.y,B.j.L(0.4),B.bg,2
 p=A.U(n,B.a0l,B.h,n,n,n,n,n,n,B.bt,n,n,n)
 o=A.P(25)
 l=A.b([new A.aJ(0,B.y,B.j.L(0.4),B.cw,15)],l)
-return A.aB1(A.acU(A.U(n,A.aw(A.b([q,B.aX,B.a_3,B.E,p,B.aX,A.U(n,A.ev(B.P,n,A.ec(!1,A.P(25),!0,A.U(n,B.RL,B.h,n,n,n,n,n,n,B.p3,n,n,n),n,!0,n,n,n,n,n,n,n,n,n,new A.aoD(m),n,n,n,n),B.h,B.D,0,n,n,n,n,n,B.b3),B.h,n,n,new A.W(n,n,n,o,l,B.b2,B.o),n,n,n,n,n,n,n)],t.p),B.r,B.k,B.m,0,B.u),B.h,n,n,B.fa,n,n,n,B.fz,n,n,1/0),r),new A.i(0,50*(1-s)))},
+return A.aB1(A.acU(A.U(n,A.aw(A.b([q,B.aX,B.a_4,B.E,p,B.aX,A.U(n,A.ev(B.P,n,A.ec(!1,A.P(25),!0,A.U(n,B.RL,B.h,n,n,n,n,n,n,B.p3,n,n,n),n,!0,n,n,n,n,n,n,n,n,n,new A.aoD(m),n,n,n,n),B.h,B.D,0,n,n,n,n,n,B.b3),B.h,n,n,new A.W(n,n,n,o,l,B.b2,B.o),n,n,n,n,n,n,n)],t.p),B.r,B.k,B.m,0,B.u),B.h,n,n,B.fa,n,n,n,B.fz,n,n,1/0),r),new A.i(0,50*(1-s)))},
 $S:19}
 A.aoD.prototype={
 $0(){return this.a.Sz()},
@@ -90030,7 +90030,7 @@ $S:222}
 A.aoH.prototype={
 $1(a){var s=A.P(16),r=this.a,q=t.p
 r=A.aw(A.b([B.a0h,B.E,r.Ey(B.ex,"Email","info@runner-code.com"),B.cj,r.Ey(B.ey,"Phone","+961 79 161 153"),B.cj,r.Ey(B.lo,"Hours","Open 24 hours")],q),B.B,B.k,B.aC,0,B.u)
-return A.pc(A.b([A.eM(B.CE,new A.aoG(a),null)],q),B.aN,r,new A.bG(s,B.q),B.a07)},
+return A.pc(A.b([A.eM(B.CE,new A.aoG(a),null)],q),B.aN,r,new A.bG(s,B.q),B.a08)},
 $S:42}
 A.aoG.prototype={
 $0(){return A.bY(this.a,!1).cu()},
@@ -90051,7 +90051,7 @@ r=s.y
 r.O$=q
 r.y2$=0
 s.aB()},
-J(a){var s,r,q,p,o,n=this,m=null,l=A.pg(m,B.aN,m,A.f0(m,m,B.pV,m,m,new A.aoe(a),m,m,m),B.a05),k=A.P(12),j=Date.now(),i=new A.ba(Date.now(),0,!1).el(7776e9)
+J(a){var s,r,q,p,o,n=this,m=null,l=A.pg(m,B.aN,m,A.f0(m,m,B.pV,m,m,new A.aoe(a),m,m,m),B.a06),k=A.P(12),j=Date.now(),i=new A.ba(Date.now(),0,!1).el(7776e9)
 k=A.U(m,A.aGc(B.o5,B.oQ,new A.ba(j,0,!1),n.e,B.py,i,new A.aof(n),new A.aog(n),t.N),B.h,m,m,new A.W(B.df,m,m,k,m,m,B.o),m,m,m,m,m,m,m)
 i=A.P(12)
 j=n.f
@@ -90066,7 +90066,7 @@ r=n.y5("Phone Number",n.x,B.ey)
 q=n.y5("Email",n.y,B.ex)
 p=n.z?m:n.gajx()
 o=A.ua(m,m,B.j,m,m,m,m,m,m,m,m,m,B.p1,m,new A.bG(A.P(12),B.q),m,m,m,m,m)
-return A.ks(l,B.aN,A.jy(A.aw(A.b([B.CF,B.E,k,B.aX,B.CB,B.E,i,B.aX,B.a_A,B.E,j,B.E,s,B.E,r,B.E,q,B.bi,A.bV(A.u9(n.z?B.o7:B.a_K,p,o),m,1/0)],t.p),B.B,B.k,B.m,0,B.u),B.aO,m,B.ap))},
+return A.ks(l,B.aN,A.jy(A.aw(A.b([B.CF,B.E,k,B.aX,B.CB,B.E,i,B.aX,B.a_B,B.E,j,B.E,s,B.E,r,B.E,q,B.bi,A.bV(A.u9(n.z?B.o7:B.a_L,p,o),m,1/0)],t.p),B.B,B.k,B.m,0,B.u),B.aO,m,B.ap))},
 y5(a,b,c){var s=null,r=A.P(12),q=A.ci(c,B.j,s,s)
 return A.U(s,A.Dq(!0,B.cs,!1,s,!0,B.C,s,A.a_O(),b,s,s,s,s,s,2,A.ns(s,new A.cQ(4,A.P(12),B.q),s,s,s,s,s,s,!0,s,s,s,s,s,s,B.D,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,B.c1,a,!0,!0,s,q,s,s,s,s,s,s,s,s,s,s,s),B.aa,!0,s,!0,s,!1,s,B.cD,s,s,s,s,s,s,s,1,s,s,!1,"\u2022",s,s,s,s,s,!1,s,s,!1,s,!0,s,B.aO,s,s,B.cn,B.c6,s,s,s,s,s,s,B.d_,!0,B.ae,s,B.eV,s,s,s,s),B.h,s,s,new A.W(B.df,s,s,r,s,s,B.o),s,s,s,s,s,s,s)},
 zl(){var s=0,r=A.H(t.H),q,p=2,o=[],n=[],m=this,l,k,j,i,h,g,f,e,d,c,b,a
@@ -90334,18 +90334,18 @@ r.toString
 A.kZ(s,s,!0,s,new A.aqp(this),r,s,!0,t.z)},
 J(a){var s=A.a6(a,null,t.w).w.a.a<600
 return A.ks(this.adH(s),B.p,A.aw(A.b([A.bL(this.a5Z(s),1),this.adI(s)],t.p),B.r,B.k,B.m,0,B.u))},
-adH(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.aq7(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.pY,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a_R],q),B.r,B.k,B.m,0,s)
+adH(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.aq7(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.pY,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a_S],q),B.r,B.k,B.m,0,s)
 return A.pg(A.b([A.U(s,B.mW,B.h,s,s,new A.W(s,s,s,A.P(12),s,B.aU,B.o),s,s,s,B.dM,s,s,s),B.aD,A.f0(s,s,B.lq,s,s,this.gadL(),s,s,"Clear Images"),B.aD],q),B.p,0,r,p)},
 a5Z(a){var s,r,q,p,o,n,m,l=this,k=null,j=l.f.length
 if(j===0&&!l.r){j=A.U(k,B.Kq,B.h,k,k,new A.W(k,k,k,A.P(18),A.b([new A.aJ(0,B.y,B.j.L(0.4),B.bg,20)],t.V),B.b2,B.o),k,70,k,k,k,k,70)
-s=A.U(k,B.a_2,B.h,k,k,k,k,k,k,B.bt,k,k,k)
+s=A.U(k,B.a_3,B.h,k,k,k,k,k,k,B.bt,k,k,k)
 r=A.U(k,B.CG,B.h,k,k,k,k,k,k,B.bt,k,k,k)
 q=t.p
 p=A.U(k,A.aw(A.b([l.yr(B.lj,"AI-Powered Generation","Advanced algorithms create unique images"),B.aS,l.yr(B.pE,"Text-to-Image","Describe your vision in words"),B.aS,l.yr(B.JI,"High Quality","Professional-grade image results"),B.aS,l.yr(B.JT,"Save & Share","Keep your creations forever")],q),B.r,B.k,B.m,0,B.u),B.h,k,k,k,k,k,k,B.bt,k,k,k)
 o=A.b([B.j.L(0.1),B.j.L(0.05)],t.W)
 n=A.P(12)
 m=A.bW(B.j.L(0.3),1)
-return A.U(k,A.jy(A.e8(new A.by(B.aI,A.aw(A.b([j,B.bh,B.a_C,B.aS,s,B.aX,r,B.aS,p,B.aX,A.U(k,A.aZ(A.b([A.ci(B.JE,B.j,k,18),B.aD,B.ZW],q),B.r,B.aR,B.m,0,k),B.h,k,k,new A.W(k,k,m,n,k,new A.dG(B.b_,B.bK,B.au,o,k,k),B.o),k,k,k,B.i1,k,k,k)],q),B.r,B.aR,B.m,0,B.u),k),k,k),k,k,B.ap),B.h,k,k,B.fa,k,k,k,k,k,k,k)}s=l.r?1:0
+return A.U(k,A.jy(A.e8(new A.by(B.aI,A.aw(A.b([j,B.bh,B.a_D,B.aS,s,B.aX,r,B.aS,p,B.aX,A.U(k,A.aZ(A.b([A.ci(B.JE,B.j,k,18),B.aD,B.ZW],q),B.r,B.aR,B.m,0,k),B.h,k,k,new A.W(k,k,m,n,k,new A.dG(B.b_,B.bK,B.au,o,k,k),B.o),k,k,k,B.i1,k,k,k)],q),B.r,B.aR,B.m,0,B.u),k),k,k),k,k,B.ap),B.h,k,k,B.fa,k,k,k,k,k,k,k)}s=l.r?1:0
 return A.aAl(l.e,new A.aqb(l,a),j+s,B.aI)},
 yr(a,b,c){var s=null,r=B.j.L(0.05),q=A.P(12),p=A.bW(B.j.L(0.2),1),o=A.P(10),n=A.b([new A.aJ(0,B.y,B.j.L(0.3),B.aw,8)],t.V),m=t.p
 return A.U(s,A.aZ(A.b([A.U(s,A.ci(a,B.e,s,22),B.h,s,s,new A.W(s,s,s,o,n,B.b2,B.o),s,s,s,B.fx,s,s,s),B.c0,A.bL(A.aw(A.b([A.a8(b,s,s,s,B.Cq,s,s,s),B.bO,A.a8(c,s,s,s,A.br(s,s,B.e.L(0.7),s,s,s,s,s,s,s,s,13,s,s,B.v,s,1.3,!0,s,s,s,s,s,s,s,s),s,s,s)],m),B.B,B.k,B.m,0,B.u),1)],m),B.r,B.k,B.m,0,s),B.h,s,s,new A.W(r,s,p,q,s,s,B.o),s,s,s,B.aI,s,s,s)},
@@ -90368,10 +90368,10 @@ l=A.P(30)
 o.push(A.U(j,A.e8(A.aw(A.b([A.U(j,B.Ki,B.h,j,j,new A.W(q,j,A.bW(B.be,2),l,j,j,B.o),j,60,j,j,j,j,60),B.E,A.a8(n,j,j,j,B.jm,B.b6,j,j)],m),B.r,B.aR,B.m,0,B.u),j,j),B.h,j,j,j,j,300,j,B.aO,j,j,j))}else{n=k.a5W(a.b)
 l=A.P(25)
 q=A.b([new A.aJ(0,B.y,B.j.L(0.3),B.aw,8)],q)
-o.push(A.aw(A.b([n,A.U(j,A.aZ(A.b([A.U(j,A.ev(B.P,j,A.ec(!1,A.P(25),!0,A.U(j,A.aZ(A.b([B.K5,B.aD,B.a_X],m),B.r,B.k,B.aC,0,j),B.h,j,j,j,j,j,j,B.i0,j,j,j),j,!0,j,j,j,j,j,j,j,j,j,new A.aqa(k,a),j,j,j,j),B.h,B.D,0,j,j,j,j,j,B.b3),B.h,j,j,new A.W(j,j,j,l,q,B.b2,B.o),j,j,j,j,j,j,j)],m),B.r,B.aR,B.m,0,j),B.h,j,j,j,j,j,j,B.fy,j,j,j)],m),B.r,B.k,B.m,0,B.u))}}return new A.by(B.i_,A.U(j,A.aw(o,B.B,B.k,B.m,0,B.u),B.h,j,new A.ah(0,i,0,1/0),new A.W(B.bX,j,r,s,p,j,B.o),j,j,j,j,j,j,1/0),j)},
+o.push(A.aw(A.b([n,A.U(j,A.aZ(A.b([A.U(j,A.ev(B.P,j,A.ec(!1,A.P(25),!0,A.U(j,A.aZ(A.b([B.K5,B.aD,B.a_Y],m),B.r,B.k,B.aC,0,j),B.h,j,j,j,j,j,j,B.i0,j,j,j),j,!0,j,j,j,j,j,j,j,j,j,new A.aqa(k,a),j,j,j,j),B.h,B.D,0,j,j,j,j,j,B.b3),B.h,j,j,new A.W(j,j,j,l,q,B.b2,B.o),j,j,j,j,j,j,j)],m),B.r,B.aR,B.m,0,j),B.h,j,j,j,j,j,j,B.fy,j,j,j)],m),B.r,B.k,B.m,0,B.u))}}return new A.by(B.i_,A.U(j,A.aw(o,B.B,B.k,B.m,0,B.u),B.h,j,new A.ah(0,i,0,1/0),new A.W(B.bX,j,r,s,p,j,B.o),j,j,j,j,j,j,1/0),j)},
 a60(){var s=null,r=this.x
 r===$&&A.a()
-return A.U(s,A.e8(A.aw(A.b([A.dp(r,new A.aqd(this),s),B.E,B.CC,B.cj,B.a_F],t.p),B.r,B.aR,B.m,0,B.u),s,s),B.h,s,s,s,s,300,s,B.aO,s,s,s)},
+return A.U(s,A.e8(A.aw(A.b([A.dp(r,new A.aqd(this),s),B.E,B.CC,B.cj,B.a_G],t.p),B.r,B.aR,B.m,0,B.u),s,s),B.h,s,s,s,s,300,s,B.aO,s,s,s)},
 a5W(a){var s=null,r=A.bW(B.j.L(0.3),1)
 return A.U(s,A.pr(B.nH,new A.uo(A.aFK(s,s,new A.uR(a,1,s,B.a2h)),new A.aq8(),new A.aq9(),1/0,s,B.Eo,s)),B.h,s,s,new A.W(s,s,r,B.nH,s,s,B.o),s,300,s,s,s,s,s)},
 adJ(){var s=null,r=A.P(20),q=A.bW(B.j.L(0.3),1),p=this.x
@@ -90464,7 +90464,7 @@ $0(){B.b.a1(this.a.f)},
 $S:0}
 A.aqp.prototype={
 $1(a){var s=A.P(16)
-return A.pc(A.b([A.eM(B.mU,new A.aqn(a),null),A.eM(B.mV,new A.aqo(this.a,a),null)],t.p),B.aN,B.a_o,new A.bG(s,B.q),B.a_Z)},
+return A.pc(A.b([A.eM(B.mU,new A.aqn(a),null),A.eM(B.mV,new A.aqo(this.a,a),null)],t.p),B.aN,B.a_p,new A.bG(s,B.q),B.a0_)},
 $S:42}
 A.aqn.prototype={
 $0(){return A.bY(this.a,!1).cu()},
@@ -90540,8 +90540,8 @@ s===$&&A.a()
 s.l()
 this.a43()},
 J(a){var s=this,r=null,q=A.a6(a,r,t.w).w.a.a<600,p=t.p
-return A.ks(s.aea(q),B.p,A.jy(A.aw(A.b([s.a5X(q),B.bi,A.U(r,A.aw(A.b([B.a00,B.bh,A.aw(A.b([s.xO("Web Development","Custom Websites",B.pP,"Custom websites and web applications built with modern technologies and responsive design for optimal user experience.",B.hK),B.E,s.xO("Desktop Applications","Software Solutions",B.JC,"Professional desktop software solutions for Windows, macOS, and Linux platforms with intuitive user interfaces.",B.kl),B.E,s.xO("Mobile Development","iOS & Android",B.JR,"Native and cross-platform mobile applications for iOS and Android with cutting-edge features and performance.",B.k7),B.E,s.xO("UI/UX Design","User Experience",B.pF,"User-centered design solutions that enhance user experience and drive engagement across all platforms.",B.k8)],p),B.r,B.k,B.m,0,B.u)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_e,B.bh,s.yy(B.fG,"Free Consultation","Get expert advice and project planning with our complimentary consultation session."),B.E,s.yy(B.pN,"Agile Development","Iterative development process ensuring your project evolves with your business needs."),B.E,s.yy(B.pL,"Quality Assurance","Rigorous testing and quality control to deliver reliable and secure solutions."),B.E,s.yy(B.JU,"24/7 Support","Round-the-clock technical support and maintenance for all our delivered solutions.")],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_1,B.bh,A.aB7(A.b([s.cT("HTML5",B.Z,B.oF),s.cT("CSS3",B.Z,B.oI),s.cT("JavaScript",B.Z,B.oG),s.cT("PHP",B.Z,B.oJ),s.cT("React",B.Z,B.oA),s.cT("Angular",B.Z,B.Gv),s.cT("Vue.js",B.Z,B.Hu),s.cT("Node.js",B.Z,B.Gm),s.cT("Laravel",B.Z,B.Hm),s.cT("Django",B.Z,B.Gc),s.cT("C#",B.Z,B.oc),s.cT("C++",B.Z,B.oa),s.cT("Java",B.Z,B.oB),s.cT("Python",B.Z,B.om),s.cT(".NET",B.Z,B.G5),s.cT("WPF",B.Z,B.ou),s.cT("Flutter",B.Z,B.GK),s.cT("React Native",B.Z,B.oA),s.cT("Swift",B.Z,B.H_),s.cT("Kotlin",B.Z,B.Gu),s.cT("Xamarin",B.Z,B.Hj),s.cT("MySQL",B.ij,B.Gk),s.cT("PostgreSQL",B.ij,B.Gp),s.cT("MongoDB",B.ij,B.Hh),s.cT("Firebase",B.ij,B.H5),s.cT("AWS",B.lk,B.GA),s.cT("Azure",B.lk,B.ou),s.cT("Docker",B.lk,B.Hb),s.cT("Git",B.Z,B.Gy)],p),12,12)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_j,B.bh,s.xN(1,"Consultation","Understand your requirements and business goals through detailed consultation.",B.JP),B.E,s.xN(2,"Planning & Design","Create comprehensive project plans and design mockups for your approval.",B.pF),B.E,s.xN(3,"Development","Build your solution using modern technologies and best practices.",B.Z),B.E,s.xN(4,"Testing & Launch","Thorough testing and quality assurance before launching your solution.",B.fG)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,s.a5P(q),B.bi],p),B.r,B.k,B.m,0,B.u),r,r,B.ap))},
-aea(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.apV(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.Kn,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a04],q),B.r,B.k,B.m,0,s)
+return A.ks(s.aea(q),B.p,A.jy(A.aw(A.b([s.a5X(q),B.bi,A.U(r,A.aw(A.b([B.a01,B.bh,A.aw(A.b([s.xO("Web Development","Custom Websites",B.pP,"Custom websites and web applications built with modern technologies and responsive design for optimal user experience.",B.hK),B.E,s.xO("Desktop Applications","Software Solutions",B.JC,"Professional desktop software solutions for Windows, macOS, and Linux platforms with intuitive user interfaces.",B.kl),B.E,s.xO("Mobile Development","iOS & Android",B.JR,"Native and cross-platform mobile applications for iOS and Android with cutting-edge features and performance.",B.k7),B.E,s.xO("UI/UX Design","User Experience",B.pF,"User-centered design solutions that enhance user experience and drive engagement across all platforms.",B.k8)],p),B.r,B.k,B.m,0,B.u)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_f,B.bh,s.yy(B.fG,"Free Consultation","Get expert advice and project planning with our complimentary consultation session."),B.E,s.yy(B.pN,"Agile Development","Iterative development process ensuring your project evolves with your business needs."),B.E,s.yy(B.pL,"Quality Assurance","Rigorous testing and quality control to deliver reliable and secure solutions."),B.E,s.yy(B.JU,"24/7 Support","Round-the-clock technical support and maintenance for all our delivered solutions.")],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_2,B.bh,A.aB7(A.b([s.cT("HTML5",B.Z,B.oF),s.cT("CSS3",B.Z,B.oI),s.cT("JavaScript",B.Z,B.oG),s.cT("PHP",B.Z,B.oJ),s.cT("React",B.Z,B.oA),s.cT("Angular",B.Z,B.Gv),s.cT("Vue.js",B.Z,B.Hu),s.cT("Node.js",B.Z,B.Gm),s.cT("Laravel",B.Z,B.Hm),s.cT("Django",B.Z,B.Gc),s.cT("C#",B.Z,B.oc),s.cT("C++",B.Z,B.oa),s.cT("Java",B.Z,B.oB),s.cT("Python",B.Z,B.om),s.cT(".NET",B.Z,B.G5),s.cT("WPF",B.Z,B.ou),s.cT("Flutter",B.Z,B.GK),s.cT("React Native",B.Z,B.oA),s.cT("Swift",B.Z,B.H_),s.cT("Kotlin",B.Z,B.Gu),s.cT("Xamarin",B.Z,B.Hj),s.cT("MySQL",B.ij,B.Gk),s.cT("PostgreSQL",B.ij,B.Gp),s.cT("MongoDB",B.ij,B.Hh),s.cT("Firebase",B.ij,B.H5),s.cT("AWS",B.lk,B.GA),s.cT("Azure",B.lk,B.ou),s.cT("Docker",B.lk,B.Hb),s.cT("Git",B.Z,B.Gy)],p),12,12)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,A.U(r,A.aw(A.b([B.a_k,B.bh,s.xN(1,"Consultation","Understand your requirements and business goals through detailed consultation.",B.JP),B.E,s.xN(2,"Planning & Design","Create comprehensive project plans and design mockups for your approval.",B.pF),B.E,s.xN(3,"Development","Build your solution using modern technologies and best practices.",B.Z),B.E,s.xN(4,"Testing & Launch","Thorough testing and quality assurance before launching your solution.",B.fG)],p),B.B,B.k,B.m,0,B.u),B.h,r,r,r,r,r,r,B.bt,r,r,r),B.bi,s.a5P(q),B.bi],p),B.r,B.k,B.m,0,B.u),r,r,B.ap))},
+aea(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.apV(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.Kn,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a05],q),B.r,B.k,B.m,0,s)
 return A.pg(A.b([A.U(s,B.CI,B.h,s,s,new A.W(s,s,s,A.P(12),s,B.aU,B.o),s,s,s,B.dM,s,s,s),B.aD],q),B.p,0,r,p)},
 a5X(a){var s=this.f
 s===$&&A.a()
@@ -90556,7 +90556,7 @@ return A.U(s,A.aZ(A.b([A.ci(b,c,s,18),B.aD,A.a8(a,s,s,s,A.br(s,s,c,s,s,s,s,s,s,s
 xN(a,b,c,d){var s=null,r=B.j.L(0.05),q=A.P(12),p=A.bW(B.j.L(0.2),1),o=A.P(20),n=t.p
 return A.U(s,A.aZ(A.b([A.U(s,A.e8(A.a8(B.f.k(a),s,s,s,B.eY,s,s,s),s,s),B.h,s,s,new A.W(s,s,s,o,s,B.aU,B.o),s,40,s,s,s,s,40),B.c0,A.bL(A.aw(A.b([A.a8(b,s,s,s,B.bJ,s,s,s),B.bO,A.a8(c,s,s,s,A.br(s,s,B.e.L(0.7),s,s,s,s,s,s,s,s,14,s,s,s,s,1.3,!0,s,s,s,s,s,s,s,s),s,s,s)],n),B.B,B.k,B.m,0,B.u),1),A.ci(d,B.j,s,24)],n),B.r,B.k,B.m,0,s),B.h,s,s,new A.W(r,s,p,q,s,s,B.o),s,s,s,B.aI,s,s,s)},
 a5P(a){var s=this,r=null,q=A.b([B.j.L(0.1),B.j.L(0.05)],t.W),p=A.P(16),o=A.bW(B.j.L(0.3),1),n=t.p
-return A.U(r,A.aw(A.b([B.a_f,B.E,B.a0k,B.aX,A.aZ(A.b([s.Ne("Get Consultation",B.fG,new A.apW(s)),B.c0,s.Ne("Contact Us",B.ln,new A.apX(s))],n),B.r,B.aR,B.m,0,r)],n),B.r,B.k,B.m,0,B.u),B.h,r,r,new A.W(r,r,o,p,r,new A.dG(B.b_,B.bK,B.au,q,r,r),B.o),r,r,r,B.fz,r,r,r)},
+return A.U(r,A.aw(A.b([B.a_g,B.E,B.a0k,B.aX,A.aZ(A.b([s.Ne("Get Consultation",B.fG,new A.apW(s)),B.c0,s.Ne("Contact Us",B.ln,new A.apX(s))],n),B.r,B.aR,B.m,0,r)],n),B.r,B.k,B.m,0,B.u),B.h,r,r,new A.W(r,r,o,p,r,new A.dG(B.b_,B.bK,B.au,q,r,r),B.o),r,r,r,B.fz,r,r,r)},
 Ne(a,b,c){var s=null,r=A.P(25),q=A.b([new A.aJ(0,B.y,B.j.L(0.4),B.aw,12)],t.V)
 return A.U(s,A.ev(B.P,s,A.ec(!1,A.P(25),!0,A.U(s,A.aZ(A.b([A.ci(b,B.e,s,20),B.aD,A.a8(a,s,s,s,B.Cs,s,s,s)],t.p),B.r,B.k,B.aC,0,s),B.h,s,s,s,s,s,s,B.i1,s,s,s),s,!0,s,s,s,s,s,s,s,s,s,c,s,s,s,s),B.h,B.D,0,s,s,s,s,s,B.b3),B.h,s,s,new A.W(s,s,s,r,q,B.b2,B.o),s,s,s,s,s,s,s)},
 Sy(){var s=null,r=this.c
@@ -90583,10 +90583,10 @@ r=l.a
 r=J.Jg(l.b.a7(0,r.gq(r)),0,1)
 l=t.V
 q=A.U(n,B.K0,B.h,n,n,new A.W(n,n,n,A.P(20),A.b([new A.aJ(0,B.y,B.j.L(0.4),B.bg,20)],l),B.b2,B.o),n,80,n,n,n,n,80)
-p=A.U(n,B.a_l,B.h,n,n,n,n,n,n,B.bt,n,n,n)
+p=A.U(n,B.a_m,B.h,n,n,n,n,n,n,B.bt,n,n,n)
 o=A.P(25)
 l=A.b([new A.aJ(0,B.y,B.j.L(0.4),B.cw,15)],l)
-return A.aB1(A.acU(A.U(n,A.aw(A.b([q,B.aX,B.a_H,B.E,p,B.aX,A.U(n,A.ev(B.P,n,A.ec(!1,A.P(25),!0,A.U(n,B.RK,B.h,n,n,n,n,n,n,B.p3,n,n,n),n,!0,n,n,n,n,n,n,n,n,n,new A.apY(m),n,n,n,n),B.h,B.D,0,n,n,n,n,n,B.b3),B.h,n,n,new A.W(n,n,n,o,l,B.b2,B.o),n,n,n,n,n,n,n)],t.p),B.r,B.k,B.m,0,B.u),B.h,n,n,B.fa,n,n,n,B.fz,n,n,1/0),r),new A.i(0,50*(1-s)))},
+return A.aB1(A.acU(A.U(n,A.aw(A.b([q,B.aX,B.a_I,B.E,p,B.aX,A.U(n,A.ev(B.P,n,A.ec(!1,A.P(25),!0,A.U(n,B.RK,B.h,n,n,n,n,n,n,B.p3,n,n,n),n,!0,n,n,n,n,n,n,n,n,n,new A.apY(m),n,n,n,n),B.h,B.D,0,n,n,n,n,n,B.b3),B.h,n,n,new A.W(n,n,n,o,l,B.b2,B.o),n,n,n,n,n,n,n)],t.p),B.r,B.k,B.m,0,B.u),B.h,n,n,B.fa,n,n,n,B.fz,n,n,1/0),r),new A.i(0,50*(1-s)))},
 $S:19}
 A.apY.prototype={
 $0(){return this.a.Sy()},
@@ -90618,8 +90618,8 @@ return A.a3d(s,B.D,A.U(s,B.Hx,B.h,s,s,new A.W(B.aN,s,s,A.P(16),s,s,B.o),s,r.a.b*
 $S:222}
 A.aq2.prototype={
 $1(a){var s=A.P(16),r=this.a,q=t.p
-r=A.aw(A.b([B.a0_,B.E,r.DQ(B.ex,"Email","info@runner-code.com"),B.cj,r.DQ(B.ey,"Phone","+961 79 161 153"),B.cj,r.DQ(B.lo,"Hours","24/7")],q),B.B,B.k,B.aC,0,B.u)
-return A.pc(A.b([A.eM(B.CE,new A.aq1(a),null)],q),B.aN,r,new A.bG(s,B.q),B.a_W)},
+r=A.aw(A.b([B.a00,B.E,r.DQ(B.ex,"Email","info@runner-code.com"),B.cj,r.DQ(B.ey,"Phone","+961 79 161 153"),B.cj,r.DQ(B.lo,"Hours","24/7")],q),B.B,B.k,B.aC,0,B.u)
+return A.pc(A.b([A.eM(B.CE,new A.aq1(a),null)],q),B.aN,r,new A.bG(s,B.q),B.a_X)},
 $S:42}
 A.aq1.prototype={
 $0(){return A.bY(this.a,!1).cu()},
@@ -90643,7 +90643,7 @@ r=s.z
 r.O$=q
 r.y2$=0
 s.aB()},
-J(a){var s,r,q,p,o,n,m=this,l=null,k=A.pg(l,B.aN,l,A.f0(l,l,B.pV,l,l,new A.amG(a),l,l,l),B.a_r),j=A.P(12),i=Date.now(),h=new A.ba(Date.now(),0,!1).el(7776e9)
+J(a){var s,r,q,p,o,n,m=this,l=null,k=A.pg(l,B.aN,l,A.f0(l,l,B.pV,l,l,new A.amG(a),l,l,l),B.a_s),j=A.P(12),i=Date.now(),h=new A.ba(Date.now(),0,!1).el(7776e9)
 j=A.U(l,A.aGc(B.o5,B.oQ,new A.ba(i,0,!1),m.e,B.py,h,new A.amH(m),new A.amI(m),t.N),B.h,l,l,new A.W(B.df,l,l,j,l,l,B.o),l,l,l,l,l,l,l)
 h=A.P(12)
 i=m.f
@@ -90659,7 +90659,7 @@ q=m.t9("Email",m.y,B.ex)
 p=m.t9("Project Description",m.z,B.pE)
 o=m.Q?l:m.gajy()
 n=A.ua(l,l,B.j,l,l,l,l,l,l,l,l,l,B.p1,l,new A.bG(A.P(12),B.q),l,l,l,l,l)
-return A.ks(k,B.aN,A.jy(A.aw(A.b([B.CF,B.E,j,B.aX,B.CB,B.E,h,B.aX,B.a03,B.E,i,B.E,s,B.E,r,B.E,q,B.E,p,B.bi,A.bV(A.u9(m.Q?B.o7:B.a_E,o,n),l,1/0)],t.p),B.B,B.k,B.m,0,B.u),B.aO,l,B.ap))},
+return A.ks(k,B.aN,A.jy(A.aw(A.b([B.CF,B.E,j,B.aX,B.CB,B.E,h,B.aX,B.a04,B.E,i,B.E,s,B.E,r,B.E,q,B.E,p,B.bi,A.bV(A.u9(m.Q?B.o7:B.a_F,o,n),l,1/0)],t.p),B.B,B.k,B.m,0,B.u),B.aO,l,B.ap))},
 t9(a,b,c){var s=null,r=A.P(12),q=a==="Project Description"?3:1,p=A.ci(c,B.j,s,s)
 return A.U(s,A.Dq(!0,B.cs,!1,s,!0,B.C,s,A.a_O(),b,s,s,s,s,s,2,A.ns(s,new A.cQ(4,A.P(12),B.q),s,s,s,s,s,s,!0,s,s,s,s,s,s,B.D,!0,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,s,B.c1,a,!0,!0,s,p,s,s,s,s,s,s,s,s,s,s,s),B.aa,!0,s,!0,s,!1,s,B.cD,s,s,s,s,s,s,s,q,s,s,!1,"\u2022",s,s,s,s,s,!1,s,s,!1,s,!0,s,B.aO,s,s,B.cn,B.c6,s,s,s,s,s,s,B.d_,!0,B.ae,s,B.eV,s,s,s,s),B.h,s,s,new A.W(B.df,s,s,r,s,s,B.o),s,s,s,s,s,s,s)},
 zm(){var s=0,r=A.H(t.H),q,p=2,o=[],n=[],m=this,l,k,j,i,h,g,f,e,d,c,b,a,a0
@@ -90691,7 +90691,7 @@ m.c.a2(t.q).f.cg(B.U8)}n=[1]
 s=5
 break}a=m.c
 if(a!=null){A.bY(a,!1).cu()
-m.c.a2(t.q).f.cg(A.dr(A.aG5("Open Email",new A.amB(m),B.e),null,null,B.iD,null,B.C,null,B.a__,null,B.kD,null,null,null,null,null,null,null,null,null))}n.push(6)
+m.c.a2(t.q).f.cg(A.dr(A.aG5("Open Email",new A.amB(m),B.e),null,null,B.iD,null,B.C,null,B.a_0,null,B.kD,null,null,null,null,null,null,null,null,null))}n.push(6)
 s=5
 break
 case 4:p=3
@@ -90831,13 +90831,13 @@ case 12:l=b
 s=13
 return A.A(j.lH(B.c.dN(i.a.a),n.Q),$async$hv)
 case 13:j=n.c
-if(j!=null){j.a2(t.q).f.cg(A.dr(null,null,null,B.aN,B.bP,B.C,null,B.a09,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
+if(j!=null){j.a2(t.q).f.cg(A.dr(null,null,null,B.aN,B.bP,B.C,null,B.a0a,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
 j=n.c
 j.toString
 A.bY(j,!1).r7(A.iy(new A.arq(n,l),null,t.z))}s=10
 break
 case 11:j=n.c
-if(j!=null)j.a2(t.q).f.cg(A.dr(null,null,null,B.bL,B.bP,B.C,null,B.ZZ,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
+if(j!=null)j.a2(t.q).f.cg(A.dr(null,null,null,B.bL,B.bP,B.C,null,B.a__,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
 case 10:o.push(7)
 s=6
 break
@@ -90865,7 +90865,7 @@ l=A.a8("RUNNER CODE",s,s,s,A.br(s,s,B.e,s,s,s,s,s,s,s,s,l,s,s,B.ar,s,s,!0,s,1.5,
 k=A.bV(s,r?8:12,s)
 j=B.e.L(0.8)
 i=t.p
-j=A.aw(A.b([n,m,l,k,A.a8("Welcome back",s,s,s,A.br(s,s,j,s,s,s,s,s,s,s,s,r?16:18,s,s,B.v,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)],i),B.r,B.k,B.m,0,B.u)
+j=A.aw(A.b([n,m,l,k,A.a8("Welcome!",s,s,s,A.br(s,s,j,s,s,s,s,s,s,s,s,r?16:18,s,s,B.v,s,s,!0,s,s,s,s,s,s,s,s),s,s,s)],i),B.r,B.k,B.m,0,B.u)
 n=A.bV(s,r?30:50,s)
 m=this.a62(r)
 l=A.bV(s,r?20:30,s)
@@ -90981,7 +90981,7 @@ hv(){var s=0,r=A.H(t.H),q,p=2,o=[],n=[],m=this,l,k,j,i,h,g,f
 var $async$hv=A.D(function(a,b){if(a===1){o.push(b)
 s=p}while(true)switch(s){case 0:s=m.d.gM().oG()?3:4
 break
-case 3:if(!m.ch){m.c.a2(t.q).f.cg(A.dr(null,null,null,B.aN,B.bP,B.C,null,B.a_w,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
+case 3:if(!m.ch){m.c.a2(t.q).f.cg(A.dr(null,null,null,B.aN,B.bP,B.C,null,B.a_x,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
 s=1
 break}m.V(new A.auE(m))
 p=6
@@ -90993,7 +90993,7 @@ return A.A(i.Az(B.c.dN(h.a.a)),$async$hv)
 case 9:l=b
 A.c0("Email exists check result: "+A.m(l))
 if(l){i=m.c
-if(i!=null)i.a2(t.q).f.cg(A.dr(null,null,null,B.bL,B.bP,B.C,null,B.a_c,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
+if(i!=null)i.a2(t.q).f.cg(A.dr(null,null,null,B.bL,B.bP,B.C,null,B.a_d,null,B.ak,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
 n=[1]
 s=7
 break}s=10
@@ -91005,7 +91005,7 @@ return A.A(i.wX(),$async$hv)
 case 11:s=12
 return A.A(i.lH(B.c.dN(h.a.a),!1),$async$hv)
 case 12:i=m.c
-if(i!=null){i.a2(t.q).f.cg(A.dr(null,null,null,B.hQ,B.bP,B.C,null,B.a_O,null,B.hZ,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
+if(i!=null){i.a2(t.q).f.cg(A.dr(null,null,null,B.hQ,B.bP,B.C,null,B.a_P,null,B.hZ,null,null,null,null,null,null,new A.bG(A.P(8),B.q),null,null))
 i=m.c
 i.toString
 A.bY(i,!1).r7(A.iy(new A.auF(m),null,t.z))}n.push(8)
@@ -91402,18 +91402,18 @@ case 1:return A.E(p.at(-1),r)}})
 return A.G($async$zj,r)},
 J(a){var s=A.a6(a,null,t.w).w.a.a<600
 return A.ks(this.agf(s),B.p,A.aw(A.b([A.bL(this.a5O(s),1),this.agg(s)],t.p),B.r,B.k,B.m,0,B.u))},
-agf(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.arY(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.K2,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a0b],q),B.r,B.k,B.m,0,s)
+agf(a){var s=null,r=A.f0(s,s,B.fH,s,s,new A.arY(this),s,s,s),q=t.p,p=A.aZ(A.b([A.U(s,B.K2,B.h,s,s,new A.W(s,s,s,A.P(8),s,B.aU,B.o),s,s,s,B.cO,s,s,s),B.aA,B.a0c],q),B.r,B.k,B.m,0,s)
 return A.pg(A.b([A.U(s,B.mW,B.h,s,s,new A.W(s,s,s,A.P(12),s,B.aU,B.o),s,s,s,B.dM,s,s,s),B.aD,A.f0(s,s,B.lq,s,s,this.gagj(),s,s,"Clear Chat"),B.aD],q),B.p,0,r,p)},
 a5O(a){var s,r,q,p,o,n,m,l=this,k=null,j=l.f.length
 if(j===0&&!l.r){j=A.U(k,B.Kf,B.h,k,k,new A.W(k,k,k,A.P(18),A.b([new A.aJ(0,B.y,B.j.L(0.4),B.bg,20)],t.V),B.b2,B.o),k,70,k,k,k,k,70)
-s=A.U(k,B.a_T,B.h,k,k,k,k,k,k,B.bt,k,k,k)
+s=A.U(k,B.a_U,B.h,k,k,k,k,k,k,B.bt,k,k,k)
 r=A.U(k,B.CG,B.h,k,k,k,k,k,k,B.bt,k,k,k)
 q=t.p
 p=A.U(k,A.aw(A.b([l.yQ(B.lj,"Advanced AI Technology","Powered by cutting-edge language models"),B.E,l.yQ(B.JK,"Multi-Language Support","Communicate in any language naturally"),B.E,l.yQ(B.pJ,"Voice Recognition","Speak and get instant responses"),B.E,l.yQ(B.pL,"Secure & Private","Your conversations are protected")],q),B.r,B.k,B.m,0,B.u),B.h,k,k,k,k,k,k,B.IU,k,k,k)
 o=A.b([B.j.L(0.1),B.j.L(0.05)],t.W)
 n=A.P(12)
 m=A.bW(B.j.L(0.3),1)
-return A.U(k,A.jy(A.e8(new A.by(B.IP,A.aw(A.b([j,B.bh,B.a_x,B.aS,s,B.bi,r,B.E,p,B.bi,A.U(k,A.aZ(A.b([A.ci(B.pB,B.j,k,18),B.aD,B.a_z],q),B.r,B.aR,B.m,0,k),B.h,k,k,new A.W(k,k,m,n,k,new A.dG(B.b_,B.bK,B.au,o,k,k),B.o),k,k,k,B.i1,k,k,k)],q),B.r,B.aR,B.m,0,B.u),k),k,k),k,k,B.ap),B.h,k,k,B.fa,k,k,k,k,k,k,k)}s=l.r?1:0
+return A.U(k,A.jy(A.e8(new A.by(B.IP,A.aw(A.b([j,B.bh,B.a_y,B.aS,s,B.bi,r,B.E,p,B.bi,A.U(k,A.aZ(A.b([A.ci(B.pB,B.j,k,18),B.aD,B.a_A],q),B.r,B.aR,B.m,0,k),B.h,k,k,new A.W(k,k,m,n,k,new A.dG(B.b_,B.bK,B.au,o,k,k),B.o),k,k,k,B.i1,k,k,k)],q),B.r,B.aR,B.m,0,B.u),k),k,k),k,k,B.ap),B.h,k,k,B.fa,k,k,k,k,k,k,k)}s=l.r?1:0
 return A.aAl(l.e,new A.arZ(l,a),j+s,B.aI)},
 yQ(a,b,c){var s=null,r=B.j.L(0.05),q=A.P(12),p=A.bW(B.j.L(0.2),1),o=A.P(10),n=A.b([new A.aJ(0,B.y,B.j.L(0.3),B.aw,8)],t.V),m=t.p
 return A.U(s,A.aZ(A.b([A.U(s,A.ci(a,B.e,s,22),B.h,s,s,new A.W(s,s,s,o,n,B.b2,B.o),s,s,s,B.fx,s,s,s),B.c0,A.bL(A.aw(A.b([A.a8(b,s,s,s,B.Cq,s,s,s),B.bO,A.a8(c,s,s,s,A.br(s,s,B.e.L(0.7),s,s,s,s,s,s,s,s,13,s,s,B.v,s,1.3,!0,s,s,s,s,s,s,s,s),s,s,s)],m),B.B,B.k,B.m,0,B.u),1)],m),B.r,B.k,B.m,0,s),B.h,s,s,new A.W(r,s,p,q,s,s,B.o),s,s,s,B.aI,s,s,s)},
@@ -91693,7 +91693,7 @@ case 5:return A.F(null,r)
 case 1:return A.E(p.at(-1),r)}})
 return A.G($async$ng,r)},
 J(a){var s=null,r=B.e.L(0.1),q=A.P(30),p=A.bW(B.e.L(0.2),1),o=A.b([new A.aJ(0,B.y,B.j.L(0.3),B.cT,20)],t.V)
-return A.ks(s,B.p,A.U(s,A.e8(A.aw(A.b([A.U(s,A.pr(A.P(30),A.up("assets/images/images.png",B.dD,120,120)),B.h,s,s,new A.W(r,s,p,q,o,s,B.o),s,120,s,s,s,s,120),B.U0,B.a_9,B.bh,B.U1,B.U_,B.a_6],t.p),B.r,B.aR,B.m,0,B.u),s,s),B.h,s,s,B.El,s,s,s,s,s,s,s))}}
+return A.ks(s,B.p,A.U(s,A.e8(A.aw(A.b([A.U(s,A.pr(A.P(30),A.up("assets/images/images.png",B.dD,120,120)),B.h,s,s,new A.W(r,s,p,q,o,s,B.o),s,120,s,s,s,s,120),B.U0,B.a_a,B.bh,B.U1,B.U_,B.a_7],t.p),B.r,B.aR,B.m,0,B.u),s,s),B.h,s,s,B.El,s,s,s,s,s,s,s))}}
 A.auT.prototype={
 $1(a){var s=this.a,r=J.aQ(s)
 return new A.lg(r.h(s,"email"),r.h(s,"name"),null)},
@@ -96820,8 +96820,8 @@ B.be=new A.r(1,1,0.26666666666666666,0.26666666666666666,B.i)
 B.Kl=new A.cb(B.Ju,50,B.be,null,null)
 B.cj=new A.dm(null,8,null,null)
 B.XW=new A.k(!0,B.be,null,null,null,null,14,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_a=new A.am("Failed to load image",null,B.XW,null,null,null,null,null,null,null)
-B.Mm=A.b(s([B.Kl,B.cj,B.a_a]),t.p)
+B.a_b=new A.am("Failed to load image",null,B.XW,null,null,null,null,null,null,null)
+B.Mm=A.b(s([B.Kl,B.cj,B.a_b]),t.p)
 B.Hw=new A.yQ(B.ap,B.aR,B.m,B.r,null,B.u,null,0,B.Mm,null)
 B.FN=new A.n6(B.X,null,null,B.Hw,null)
 B.FO=new A.tF(null,null,null,null,null,null,null,null,null)
@@ -97230,12 +97230,12 @@ B.aJ=new A.is(5)
 B.jm=new A.k(!0,B.K,null,null,null,null,16,B.aJ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.CC=new A.am("Generating your image...",null,B.jm,null,null,null,null,null,null,null)
 B.J4=new A.k9(1,B.dj,B.CC,null)
-B.a08=new A.am("Analyzing your code...",null,B.jm,null,null,null,null,null,null,null)
-B.J5=new A.k9(1,B.dj,B.a08,null)
+B.a09=new A.am("Analyzing your code...",null,B.jm,null,null,null,null,null,null,null)
+B.J5=new A.k9(1,B.dj,B.a09,null)
 B.ar=new A.is(6)
 B.bJ=new A.k(!0,B.e,null,null,null,null,16,B.ar,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_G=new A.am("Runner Code Latest Updates",null,B.bJ,null,null,null,null,null,null,null)
-B.J6=new A.k9(1,B.dj,B.a_G,null)
+B.a_H=new A.am("Runner Code Latest Updates",null,B.bJ,null,null,null,null,null,null,null)
+B.J6=new A.k9(1,B.dj,B.a_H,null)
 B.a3_=new A.UM(null)
 B.pd=new A.k9(1,B.dj,B.a3_,null)
 B.J7=new A.zJ(null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -98846,12 +98846,12 @@ B.AF=new A.vo(2,"bubble")
 B.AG=new A.ju(null,null)
 B.K9=new A.cb(B.fG,24,B.e,null,null)
 B.aA=new A.dm(12,null,null,null)
-B.a_B=new A.am("Get Free Consultation",null,B.bJ,null,null,null,null,null,null,null)
-B.Ng=A.b(s([B.K9,B.aA,B.a_B]),t.p)
+B.a_C=new A.am("Get Free Consultation",null,B.bJ,null,null,null,null,null,null,null)
+B.Ng=A.b(s([B.K9,B.aA,B.a_C]),t.p)
 B.RK=new A.o3(B.bd,B.k,B.aC,B.r,null,B.u,null,0,B.Ng,null)
 B.Kp=new A.cb(B.pK,24,B.e,null,null)
-B.a_5=new A.am("Book Free Demo Session",null,B.bJ,null,null,null,null,null,null,null)
-B.Mj=A.b(s([B.Kp,B.aA,B.a_5]),t.p)
+B.a_6=new A.am("Book Free Demo Session",null,B.bJ,null,null,null,null,null,null,null)
+B.Mj=A.b(s([B.Kp,B.aA,B.a_6]),t.p)
 B.RL=new A.o3(B.bd,B.k,B.aC,B.r,null,B.u,null,0,B.Mj,null)
 B.RM=new A.Cg(1333)
 B.ma=new A.Cg(2222)
@@ -99126,18 +99126,18 @@ B.U6=new A.jz(3,"hide")
 B.a47=new A.jz(4,"remove")
 B.BX=new A.jz(5,"timeout")
 B.U7=new A.vI(null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_d=new A.am("Please fill all fields and select date/time",null,null,null,null,null,null,null,null,null)
-B.BY=new A.i_(B.a_d,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
+B.a_e=new A.am("Please fill all fields and select date/time",null,null,null,null,null,null,null,null,null)
+B.BY=new A.i_(B.a_e,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
 B.ZX=new A.am("\u2705 Consultation request sent successfully! We will contact you soon.",null,null,null,null,null,null,null,null,null)
 B.U8=new A.i_(B.ZX,B.iD,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
-B.a_V=new A.am("Could not open the free course link",null,null,null,null,null,null,null,null,null)
-B.U9=new A.i_(B.a_V,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
-B.a_L=new A.am("Could not open the free website builder link",null,null,null,null,null,null,null,null,null)
-B.Ua=new A.i_(B.a_L,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
-B.a06=new A.am("Speech recognition is not available",null,null,null,null,null,null,null,null,null)
-B.Ub=new A.i_(B.a06,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
-B.a_p=new A.am("Incorrect password",null,null,null,null,null,null,null,null,null)
-B.Uc=new A.i_(B.a_p,B.eB,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
+B.a_W=new A.am("Could not open the free course link",null,null,null,null,null,null,null,null,null)
+B.U9=new A.i_(B.a_W,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
+B.a_M=new A.am("Could not open the free website builder link",null,null,null,null,null,null,null,null,null)
+B.Ua=new A.i_(B.a_M,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
+B.a07=new A.am("Speech recognition is not available",null,null,null,null,null,null,null,null,null)
+B.Ub=new A.i_(B.a07,B.j,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
+B.a_q=new A.am("Incorrect password",null,null,null,null,null,null,null,null,null)
+B.Uc=new A.i_(B.a_q,B.eB,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
 B.ZV=new A.am("\u2705 Booking request sent successfully! We will contact you soon.",null,null,null,null,null,null,null,null,null)
 B.Ud=new A.i_(B.ZV,B.iD,null,null,null,null,null,null,null,null,null,null,null,B.ak,null,null,null,B.C,null)
 B.BZ=new A.CR(0,"permissive")
@@ -99532,113 +99532,113 @@ B.ZW=new A.am("Describe your image and watch it come to life",null,B.Co,null,nul
 B.Cz=new A.am("Cancel",null,B.jm,null,null,null,null,null,null,null)
 B.du=new A.k(!0,B.e,null,null,null,null,20,B.ar,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.ZY=new A.am("Runner Code AI Tools",null,B.du,null,null,null,null,null,null,null)
-B.ZZ=new A.am("Invalid email or password",null,null,null,null,null,null,null,null,null)
-B.a__=new A.am("Consultation request prepared! Please check your email client.",null,B.d_,null,null,null,null,null,null,null)
+B.YQ=new A.k(!0,B.e,null,null,null,null,20,B.aJ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+B.ZZ=new A.am("Welcome!",null,B.YQ,null,null,null,null,null,null,null)
+B.a__=new A.am("Invalid email or password",null,null,null,null,null,null,null,null,null)
+B.a_0=new A.am("Consultation request prepared! Please check your email client.",null,B.d_,null,null,null,null,null,null,null)
 B.CA=new A.am("Contact Us",null,B.du,null,null,null,null,null,null,null)
 B.cB=new A.k(!0,B.e,null,null,null,null,24,B.dP,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_0=new A.am("Ready to Start Your Programming Journey?",null,B.cB,B.b6,null,null,null,null,null,null)
-B.a_1=new A.am("Technologies We Use",null,B.cB,null,null,null,null,null,null,null)
+B.a_1=new A.am("Ready to Start Your Programming Journey?",null,B.cB,B.b6,null,null,null,null,null,null)
+B.a_2=new A.am("Technologies We Use",null,B.cB,null,null,null,null,null,null,null)
 B.Cv=new A.k(!0,B.K,null,null,null,null,15,B.v,null,0.3,null,null,1.6,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_2=new A.am("Transform your ideas into stunning visuals with our AI-powered image generator. Describe what you want to see, and watch your imagination come to life.",null,B.Cv,B.b6,null,null,null,null,null,null)
+B.a_3=new A.am("Transform your ideas into stunning visuals with our AI-powered image generator. Describe what you want to see, and watch your imagination come to life.",null,B.Cv,B.b6,null,null,null,null,null,null)
 B.jo=new A.k(!0,B.e,null,null,null,null,28,B.dP,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_3=new A.am("Professional Programming Education",null,B.jo,B.b6,null,null,null,null,null,null)
-B.a_4=new A.am("Why Choose Runner Code Education?",null,B.cB,null,null,null,null,null,null,null)
+B.a_4=new A.am("Professional Programming Education",null,B.jo,B.b6,null,null,null,null,null,null)
+B.a_5=new A.am("Why Choose Runner Code Education?",null,B.cB,null,null,null,null,null,null,null)
 B.CB=new A.am("Select Time",null,B.eY,null,null,null,null,null,null,null)
 B.Xb=new A.k(!0,B.K,null,null,null,null,16,B.U,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_6=new A.am("Loading...",null,B.Xb,null,null,null,null,null,null,null)
-B.a_7=new A.am("Runner Code Websites",null,B.du,null,null,null,null,null,null,null)
+B.a_7=new A.am("Loading...",null,B.Xb,null,null,null,null,null,null,null)
+B.a_8=new A.am("Runner Code Websites",null,B.du,null,null,null,null,null,null,null)
 B.ds=new A.k(!0,B.e,null,null,null,null,null,B.ar,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_8=new A.am("Logout",null,B.ds,null,null,null,null,null,null,null)
+B.a_9=new A.am("Logout",null,B.ds,null,null,null,null,null,null,null)
 B.SO=new A.jx(B.j,B.cU,15)
 B.Nq=A.b(s([B.SO]),t.kO)
 B.XY=new A.k(!0,B.e,null,null,null,null,36,B.dP,null,2,null,null,null,null,null,null,null,null,null,null,null,null,B.Nq,null,null,null)
-B.a_9=new A.am("RUNNER CODE",null,B.XY,null,null,null,null,null,null,null)
-B.a_b=new A.am("Free Website Builder",null,B.du,null,null,null,null,null,null,null)
-B.a_c=new A.am("Email already exists. Please use a different email.",null,null,null,null,null,null,null,null,null)
-B.a_e=new A.am("Why Choose Runner Code IT Services?",null,B.cB,null,null,null,null,null,null,null)
-B.a_f=new A.am("Ready to Transform Your Business?",null,B.cB,B.b6,null,null,null,null,null,null)
+B.a_a=new A.am("RUNNER CODE",null,B.XY,null,null,null,null,null,null,null)
+B.a_c=new A.am("Free Website Builder",null,B.du,null,null,null,null,null,null,null)
+B.a_d=new A.am("Email already exists. Please use a different email.",null,null,null,null,null,null,null,null,null)
+B.a_f=new A.am("Why Choose Runner Code IT Services?",null,B.cB,null,null,null,null,null,null,null)
+B.a_g=new A.am("Ready to Transform Your Business?",null,B.cB,B.b6,null,null,null,null,null,null)
 B.Wx=new A.k(!0,B.j,null,null,null,null,14,B.dP,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.CD=new A.am("FREE",null,B.Wx,null,null,null,null,null,null,null)
 B.Wl=new A.k(!0,B.K,null,null,null,null,14,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_g=new A.am("For immediate assistance, please contact us:\n\n\ud83d\udce7 Email: info@runner-code.com\n\ud83d\udcde Phone: +961 79 161 153\n\u23f0 Hours: 24/7 Available\n\nWe're here to help you with any questions about our services!",null,B.Wl,null,null,null,null,null,null,null)
-B.a_h=new A.am("Free Programming Course",null,B.du,null,null,null,null,null,null,null)
+B.a_h=new A.am("For immediate assistance, please contact us:\n\n\ud83d\udce7 Email: info@runner-code.com\n\ud83d\udcde Phone: +961 79 161 153\n\u23f0 Hours: 24/7 Available\n\nWe're here to help you with any questions about our services!",null,B.Wl,null,null,null,null,null,null,null)
+B.a_i=new A.am("Free Programming Course",null,B.du,null,null,null,null,null,null,null)
 B.Cx=new A.k(!0,B.K,null,null,null,null,14,null,null,null,null,null,1.4,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_i=new A.am("Free programming courses with recognized certificates. Learn C++, C#, Python, Java, JavaScript, and Cyber Security.",null,B.Cx,null,null,null,null,null,null,null)
-B.a_j=new A.am("Our Development Process",null,B.cB,null,null,null,null,null,null,null)
+B.a_j=new A.am("Free programming courses with recognized certificates. Learn C++, C#, Python, Java, JavaScript, and Cyber Security.",null,B.Cx,null,null,null,null,null,null,null)
+B.a_k=new A.am("Our Development Process",null,B.cB,null,null,null,null,null,null,null)
 B.Wz=new A.k(!0,B.j,null,null,null,null,13,B.aJ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_k=new A.am("Ask me anything about code!",null,B.Wz,null,null,null,null,null,null,null)
+B.a_l=new A.am("Ask me anything about code!",null,B.Wz,null,null,null,null,null,null,null)
 B.Cm=new A.k(!0,B.K,null,null,null,null,16,B.v,null,null,null,null,1.6,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_l=new A.am("Transform your business with cutting-edge technology solutions. From web development to mobile apps, we deliver innovative digital solutions that drive growth.",null,B.Cm,B.b6,null,null,null,null,null,null)
-B.a_m=new A.am("Ready to explore the future of AI-powered development",null,B.mQ,null,null,null,null,null,null,null)
-B.a_n=new A.am("Logout",null,B.jn,null,null,null,null,null,null,null)
-B.a_o=new A.am("Are you sure you want to clear all generated images? This action cannot be undone.",null,B.c1,null,null,null,null,null,null,null)
+B.a_m=new A.am("Transform your business with cutting-edge technology solutions. From web development to mobile apps, we deliver innovative digital solutions that drive growth.",null,B.Cm,B.b6,null,null,null,null,null,null)
+B.a_n=new A.am("Ready to explore the future of AI-powered development",null,B.mQ,null,null,null,null,null,null,null)
+B.a_o=new A.am("Logout",null,B.jn,null,null,null,null,null,null,null)
+B.a_p=new A.am("Are you sure you want to clear all generated images? This action cannot be undone.",null,B.c1,null,null,null,null,null,null,null)
 B.VP=new A.k(!0,B.e,null,null,null,null,10,B.ar,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_q=new A.am("LIVE",null,B.VP,null,null,null,null,null,null,null)
-B.a_r=new A.am("Get Free Consultation",null,B.ds,null,null,null,null,null,null,null)
-B.a_s=new A.am("How It Works",null,B.cB,null,null,null,null,null,null,null)
+B.a_r=new A.am("LIVE",null,B.VP,null,null,null,null,null,null,null)
+B.a_s=new A.am("Get Free Consultation",null,B.ds,null,null,null,null,null,null,null)
+B.a_t=new A.am("How It Works",null,B.cB,null,null,null,null,null,null,null)
 B.Xs=new A.k(!0,B.K,null,null,null,null,13,B.v,null,null,null,null,1.4,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_t=new A.am("Get clear explanations for any code. Ask questions about programming concepts.",null,B.Xs,B.b6,null,null,null,null,null,null)
+B.a_u=new A.am("Get clear explanations for any code. Ask questions about programming concepts.",null,B.Xs,B.b6,null,null,null,null,null,null)
 B.XP=new A.k(!0,B.e,null,null,null,null,18,B.dP,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_u=new A.am("BREAKING NEWS",null,B.XP,null,null,null,null,null,null,null)
-B.a_v=new A.am("Send Email",null,B.jn,null,null,null,null,null,null,null)
-B.a_w=new A.am("Please agree to the terms and conditions",null,null,null,null,null,null,null,null,null)
+B.a_v=new A.am("BREAKING NEWS",null,B.XP,null,null,null,null,null,null,null)
+B.a_w=new A.am("Send Email",null,B.jn,null,null,null,null,null,null,null)
+B.a_x=new A.am("Please agree to the terms and conditions",null,null,null,null,null,null,null,null,null)
 B.Cu=new A.k(!0,B.j,null,null,null,null,null,B.ar,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.CE=new A.am("Close",null,B.Cu,null,null,null,null,null,null,null)
 B.CF=new A.am("Select Date",null,B.eY,null,null,null,null,null,null,null)
-B.a_x=new A.am("OpenChat",null,B.jo,null,null,null,null,null,null,null)
+B.a_y=new A.am("OpenChat",null,B.jo,null,null,null,null,null,null,null)
 B.Cj=new A.k(!0,B.K,null,null,null,null,16,null,null,null,null,null,1.5,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_y=new A.am("Join thousands of students who have transformed their careers with Runner Code Education.",null,B.Cj,B.b6,null,null,null,null,null,null)
-B.a_z=new A.am("Start typing or use voice input to begin your conversation",null,B.Co,null,null,null,null,null,null,null)
-B.a_A=new A.am("Contact Information",null,B.eY,null,null,null,null,null,null,null)
-B.a_C=new A.am("Image Generator",null,B.jo,null,null,null,null,null,null,null)
+B.a_z=new A.am("Join thousands of students who have transformed their careers with Runner Code Education.",null,B.Cj,B.b6,null,null,null,null,null,null)
+B.a_A=new A.am("Start typing or use voice input to begin your conversation",null,B.Co,null,null,null,null,null,null,null)
+B.a_B=new A.am("Contact Information",null,B.eY,null,null,null,null,null,null,null)
+B.a_D=new A.am("Image Generator",null,B.jo,null,null,null,null,null,null,null)
 B.Ci=new A.k(!0,B.K,null,null,null,null,16,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_D=new A.am("Are you sure you want to logout?",null,B.Ci,null,null,null,null,null,null,null)
-B.a_E=new A.am("Request Consultation",null,B.bJ,null,null,null,null,null,null,null)
+B.a_E=new A.am("Are you sure you want to logout?",null,B.Ci,null,null,null,null,null,null,null)
+B.a_F=new A.am("Request Consultation",null,B.bJ,null,null,null,null,null,null,null)
 B.Zu=new A.k(!0,B.ke,null,null,null,null,14,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_F=new A.am("This may take a few moments",null,B.Zu,null,null,null,null,null,null,null)
-B.a_H=new A.am("Professional IT Solutions",null,B.jo,B.b6,null,null,null,null,null,null)
+B.a_G=new A.am("This may take a few moments",null,B.Zu,null,null,null,null,null,null,null)
+B.a_I=new A.am("Professional IT Solutions",null,B.jo,B.b6,null,null,null,null,null,null)
 B.Xx=new A.k(!0,B.j,null,null,null,null,16,B.aJ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_I=new A.am("Close",null,B.Xx,null,null,null,null,null,null,null)
-B.a_J=new A.am("About Runner Code",null,B.du,null,null,null,null,null,null,null)
+B.a_J=new A.am("Close",null,B.Xx,null,null,null,null,null,null,null)
+B.a_K=new A.am("About Runner Code",null,B.du,null,null,null,null,null,null,null)
 B.VZ=new A.k(!0,B.e,null,null,null,null,18,B.ar,null,0.5,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.CG=new A.am("Key Features",null,B.VZ,null,null,null,null,null,null,null)
-B.a_K=new A.am("Book Demo Session",null,B.bJ,null,null,null,null,null,null,null)
-B.a_M=new A.am("To permanently delete your account, please enter your email and password:",null,B.Ci,null,null,null,null,null,null,null)
-B.a_N=new A.am("Delete Account",null,B.ds,null,null,null,null,null,null,null)
-B.a_O=new A.am("Account created successfully! You are now logged in.",null,null,null,null,null,null,null,null,null)
+B.a_L=new A.am("Book Demo Session",null,B.bJ,null,null,null,null,null,null,null)
+B.a_N=new A.am("To permanently delete your account, please enter your email and password:",null,B.Ci,null,null,null,null,null,null,null)
+B.a_O=new A.am("Delete Account",null,B.ds,null,null,null,null,null,null,null)
+B.a_P=new A.am("Account created successfully! You are now logged in.",null,null,null,null,null,null,null,null,null)
 B.VQ=new A.k(!0,B.e,null,null,null,null,10,B.ar,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_P=new A.am("NEW",null,B.VQ,null,null,null,null,null,null,null)
-B.a_Q=new A.am("Logged out successfully",null,null,null,null,null,null,null,null,null)
+B.a_Q=new A.am("NEW",null,B.VQ,null,null,null,null,null,null,null)
+B.a_R=new A.am("Logged out successfully",null,null,null,null,null,null,null,null,null)
 B.eX=new A.k(!0,B.e,null,null,null,null,20,B.ar,null,1.2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_R=new A.am("Image Generator",null,B.eX,null,null,null,null,null,null,null)
-B.a_S=new A.am("Free Website",null,B.du,null,null,null,null,null,null,null)
-B.a_T=new A.am("Your intelligent AI assistant powered by advanced language models. Ask me anything, and I'll help you with creative solutions, technical guidance, and meaningful conversations.",null,B.Cv,B.b6,null,null,null,null,null,null)
+B.a_S=new A.am("Image Generator",null,B.eX,null,null,null,null,null,null,null)
+B.a_T=new A.am("Free Website",null,B.du,null,null,null,null,null,null,null)
+B.a_U=new A.am("Your intelligent AI assistant powered by advanced language models. Ask me anything, and I'll help you with creative solutions, technical guidance, and meaningful conversations.",null,B.Cv,B.b6,null,null,null,null,null,null)
 B.mU=new A.am("Cancel",null,B.c1,null,null,null,null,null,null,null)
 B.Zn=new A.k(!0,B.eB,null,null,null,null,14,B.aJ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a_U=new A.am("\u26a0\ufe0f This action cannot be undone and all your data will be permanently lost.",null,B.Zn,null,null,null,null,null,null,null)
-B.a_W=new A.am("Contact Runner Code IT Services",null,B.ds,null,null,null,null,null,null,null)
-B.a_X=new A.am("Download Image",null,B.mR,null,null,null,null,null,null,null)
+B.a_V=new A.am("\u26a0\ufe0f This action cannot be undone and all your data will be permanently lost.",null,B.Zn,null,null,null,null,null,null,null)
+B.a_X=new A.am("Contact Runner Code IT Services",null,B.ds,null,null,null,null,null,null,null)
+B.a_Y=new A.am("Download Image",null,B.mR,null,null,null,null,null,null,null)
 B.mV=new A.am("Clear",null,B.Cu,null,null,null,null,null,null,null)
-B.a_Y=new A.am("Download free website templates including Dark Joe, Consolution, Minimus, Watch, LaslesVPN, CarRentals, and more.",null,B.Cx,null,null,null,null,null,null,null)
-B.a_Z=new A.am("Clear Images",null,B.ds,null,null,null,null,null,null,null)
-B.a0_=new A.am("Get in touch with us to discuss your IT project:",null,B.c1,null,null,null,null,null,null,null)
-B.a00=new A.am("Our IT Services",null,B.cB,null,null,null,null,null,null,null)
-B.a01=new A.am("Education Services",null,B.eX,null,null,null,null,null,null,null)
-B.a02=new A.am("Programming Languages We Teach",null,B.cB,null,null,null,null,null,null,null)
-B.a03=new A.am("Project Information",null,B.eY,null,null,null,null,null,null,null)
+B.a_Z=new A.am("Download free website templates including Dark Joe, Consolution, Minimus, Watch, LaslesVPN, CarRentals, and more.",null,B.Cx,null,null,null,null,null,null,null)
+B.a0_=new A.am("Clear Images",null,B.ds,null,null,null,null,null,null,null)
+B.a00=new A.am("Get in touch with us to discuss your IT project:",null,B.c1,null,null,null,null,null,null,null)
+B.a01=new A.am("Our IT Services",null,B.cB,null,null,null,null,null,null,null)
+B.a02=new A.am("Education Services",null,B.eX,null,null,null,null,null,null,null)
+B.a03=new A.am("Programming Languages We Teach",null,B.cB,null,null,null,null,null,null,null)
+B.a04=new A.am("Project Information",null,B.eY,null,null,null,null,null,null,null)
 B.Cy=new A.k(!0,B.e,null,null,null,null,12,B.ar,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.mW=new A.am("AI",null,B.Cy,null,null,null,null,null,null,null)
-B.a04=new A.am("IT Services",null,B.eX,null,null,null,null,null,null,null)
-B.a05=new A.am("Book Free Demo Session",null,B.ds,null,null,null,null,null,null,null)
-B.a07=new A.am("Contact Runner Code Education",null,B.ds,null,null,null,null,null,null,null)
-B.a09=new A.am("Login successful!",null,null,null,null,null,null,null,null,null)
+B.a05=new A.am("IT Services",null,B.eX,null,null,null,null,null,null,null)
+B.a06=new A.am("Book Free Demo Session",null,B.ds,null,null,null,null,null,null,null)
+B.a08=new A.am("Contact Runner Code Education",null,B.ds,null,null,null,null,null,null,null)
+B.a0a=new A.am("Login successful!",null,null,null,null,null,null,null,null,null)
 B.CH=new A.am("Clear Chat",null,B.ds,null,null,null,null,null,null,null)
-B.a0a=new A.am("Code Explainer",null,B.eX,null,null,null,null,null,null,null)
-B.a0b=new A.am("OpenChat",null,B.eX,null,null,null,null,null,null,null)
+B.a0b=new A.am("Code Explainer",null,B.eX,null,null,null,null,null,null,null)
+B.a0c=new A.am("OpenChat",null,B.eX,null,null,null,null,null,null,null)
 B.Yz=new A.k(!0,B.e,null,null,null,null,20,B.dP,null,1,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a0c=new A.am("Code Explainer",null,B.Yz,null,null,null,null,null,null,null)
-B.YQ=new A.k(!0,B.e,null,null,null,null,20,B.aJ,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.a0d=new A.am("Welcome back!",null,B.YQ,null,null,null,null,null,null,null)
+B.a0d=new A.am("Code Explainer",null,B.Yz,null,null,null,null,null,null,null)
 B.CI=new A.am("PRO",null,B.Cy,null,null,null,null,null,null,null)
 B.a0e=new A.am("Account deleted successfully",null,null,null,null,null,null,null,null,null)
 B.a0f=new A.am("Our Educational Services",null,B.cB,null,null,null,null,null,null,null)
