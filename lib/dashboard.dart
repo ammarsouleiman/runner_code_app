@@ -210,7 +210,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'Welcome back!',
+                        'Welcome!',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,

@@ -21,7 +21,7 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
   late Animation<double> _loadingAnimation;
 
   static const String _apiKey =
-      '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';
+      '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';
   static const String _apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
 
   // SharedPreferences key for saving messages
