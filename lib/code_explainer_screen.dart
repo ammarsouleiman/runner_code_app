@@ -20,9 +20,8 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
   late AnimationController _loadingController;
   late Animation<double> _loadingAnimation;
 
-  static const String _apiKey =
-      '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';
-  static const String _apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
+  static const String _apiKey = 'AIzaSyDBjozxc_umny0CrY4Ho_0sxWRu63EuNg8';
+  static const String _baseUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
 
   // SharedPreferences key for saving messages
   static const String _messagesKey = 'code_explainer_messages';
@@ -66,7 +65,7 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
     await _saveMessages();
 
     try {
-      final response = await _sendToOpenRouter(userMessage);
+      final response = await _sendToGemini(userMessage);
 
       setState(() {
         _messages.add(
@@ -92,35 +91,43 @@ class _CodeExplainerScreenState extends State<CodeExplainerScreen>
     await _saveMessages();
   }
 
-  Future<String> _sendToOpenRouter(String message) async {
+  Future<String> _sendToGemini(String message) async {
     final response = await http.post(
-      Uri.parse(_apiUrl),
+      Uri.parse('$_baseUrl?key=$_apiKey'),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer $_apiKey',
-        'HTTP-Referer': 'https://runner-code-app.com',
-        'X-Title': 'Code Explainer App',
       },
       body: jsonEncode({
-        'model': 'openai/gpt-3.5-turbo',
-        'messages': [
+        'contents': [
           {
-            'role': 'system',
-            'content':
-                'You are a helpful code explainer assistant. You help users understand code by providing clear, detailed explanations. Always respond in a helpful and educational manner.',
-          },
-          {'role': 'user', 'content': message},
+            'parts': [
+              {
+                'text': 'You are a helpful code explainer assistant. You help users understand code by providing clear, detailed explanations. Always respond in a helpful and educational manner.\n\nUser question: $message',
+              }
+            ]
+          }
         ],
-        'max_tokens': 1000,
-        'temperature': 0.7,
+        'generationConfig': {
+          'temperature': 0.7,
+          'maxOutputTokens': 1000,
+        },
       }),
     );
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      return data['choices'][0]['message']['content'];
+      if (data['candidates'] != null && 
+          data['candidates'].isNotEmpty && 
+          data['candidates'][0]['content'] != null &&
+          data['candidates'][0]['content']['parts'] != null &&
+          data['candidates'][0]['content']['parts'].isNotEmpty) {
+        return data['candidates'][0]['content']['parts'][0]['text'] ?? 'No response received';
+      } else {
+        return 'No response received';
+      }
     } else {
-      throw Exception('Failed to get response: ${response.statusCode}');
+      final errorData = jsonDecode(response.body);
+      throw Exception('Failed to get response: ${response.statusCode} - ${errorData['error']?['message'] ?? response.body}');
     }
   }
 

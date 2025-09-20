@@ -33,8 +33,8 @@ class _OpenChatScreenState extends State<OpenChatScreen>
   // Auto language detection
   String _detectedLanguage = 'en_US';
 
-  static const String _apiKey = 'jUhXeZ8ISYawqRWZhp3kpfPgACXy04Ws3sQBDO0D';
-  static const String _baseUrl = 'https://api.cohere.ai/v1/chat';
+  static const String _apiKey = 'AIzaSyDBjozxc_umny0CrY4Ho_0sxWRu63EuNg8';
+  static const String _baseUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
 
   // SharedPreferences key for saving messages
   static const String _messagesKey = 'openchat_messages';
@@ -104,7 +104,7 @@ class _OpenChatScreenState extends State<OpenChatScreen>
     await _saveMessages(); // Save after user message
 
     try {
-      final response = await _sendToCohere(userMessage);
+      final response = await _sendToGemini(userMessage);
 
       setState(() {
         _messages.add(
@@ -129,26 +129,43 @@ class _OpenChatScreenState extends State<OpenChatScreen>
     await _saveMessages(); // Save after AI response
   }
 
-  Future<String> _sendToCohere(String message) async {
+  Future<String> _sendToGemini(String message) async {
     final response = await http.post(
-      Uri.parse(_baseUrl),
+      Uri.parse('$_baseUrl?key=$_apiKey'),
       headers: {
-        'Authorization': 'Bearer $_apiKey',
         'Content-Type': 'application/json',
       },
       body: jsonEncode({
-        'message': message,
-        'model': 'command',
-        'temperature': 0.7,
-        'max_tokens': 1000,
+        'contents': [
+          {
+            'parts': [
+              {
+                'text': message,
+              }
+            ]
+          }
+        ],
+        'generationConfig': {
+          'temperature': 0.7,
+          'maxOutputTokens': 1000,
+        },
       }),
     );
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      return data['text'] ?? 'No response received';
+      if (data['candidates'] != null && 
+          data['candidates'].isNotEmpty && 
+          data['candidates'][0]['content'] != null &&
+          data['candidates'][0]['content']['parts'] != null &&
+          data['candidates'][0]['content']['parts'].isNotEmpty) {
+        return data['candidates'][0]['content']['parts'][0]['text'] ?? 'No response received';
+      } else {
+        return 'No response received';
+      }
     } else {
-      throw Exception('Failed to get response: ${response.statusCode}');
+      final errorData = jsonDecode(response.body);
+      throw Exception('Failed to get response: ${response.statusCode} - ${errorData['error']?['message'] ?? response.body}');
     }
   }
 
